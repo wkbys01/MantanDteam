@@ -1,0 +1,89 @@
+.container {
+  /* background-color: #999; */
+  position: fixed;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 238px;
+  height: 740px;
+  text-align: center;
+}
+.container div {
+  border-radius: 20px;
+}
+
+.h_50 {
+  height: 50px;
+}
+.h_65 {
+  height: 65px;
+}
+
+.page_btn,
+.popup_btn {
+  font-size: 24px;
+  font-weight: bold;
+}
+.list_btn,
+.history_btn,
+.call_btn {
+  background-color: #FFB35D;
+  box-shadow: 0 5px 3px #D97847;
+}
+.order_btn {
+  background-color: #FF6565;
+  box-shadow: 0 5px 3px #AE4747;
+}
+.checkout_btn {
+  background-color: #FFE225;
+  box-shadow: 0 5px 3px #E8AD0E;
+}
+
+.icon_flex_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 5px 35px;
+}
+.icon_img {
+  width: 40px;
+}
+
+.language_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 135px;
+  padding: 0 10px;
+}
+.language_box .icon_flex_btn {
+  gap: 30px;
+  justify-content: left;
+}
+.language_box button {
+  height: 40px;
+  border-bottom: 1px solid #2E2E2E;
+}
+.language_box img {
+  width: 40px;
+}
+
+.order_list_box {
+  background-color: #FFF9F9;
+  width: 100%;
+  height: 265px;
+  padding: 5px 15px;
+  font-size: 20px;
+  border: 1px solid #BCAAA4;
+  overflow: scroll;
+}
+.order_list li {
+  height: 50px;
+  padding: 15px 3px;
+  border-bottom: 1px solid #2E2E2E;
+}
