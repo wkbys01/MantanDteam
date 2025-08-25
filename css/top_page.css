@@ -2,7 +2,7 @@
 
 .container {
   background-color: #999;
-  width: calc(100% - 238px);
+  width: calc(100% - 238px - 20px);
   font-size: 35px;
   font-weight: var(--font-bold);
 }
@@ -38,7 +38,23 @@
 }
 
 .link_btn {
+  position: relative;
   background-color: var(--secondary-bg-gray);
-  /* padding: 20% 0; */
   text-align: center;
+}
+.link_btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* padding: calc((50% - 35px) / 2); */
+}
+.btn_txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.btn_txt img {
+  width: 50%;
 }
