@@ -1,7 +1,33 @@
-/* 共通スタイル */
+/* 共通設定 */
 
+/* ===== 色設定 ===== */
+:root {
+  --main-bg-color: #FFF2E2;
+  --secondary-bg-white: #FFF9F9;
+  --secondary-bg-soft-orange: #FFB35D;
+  --secondary-bg-gray: #CACACA;
+
+  --accent-orange: #F57C00;
+  --accent-red: #FF6565;
+  --accent-yellow: #FFE225;
+
+  --shadow-soft-orange: #D97847;
+  --shadow-orange: #C35A25;
+  --shadow-red: #AE4747;
+  --shadow-yellow: #E8AD0E;
+
+  --main-font-color: #2E2E2E;
+  --secondary-font-color: #666666;
+
+  --main-line-color: #BCAAA4;
+}
+
+
+
+
+/* ===== 共通スタイル ===== */
 body {
-  background-color: #FFF2E2;
+  background-color: var(--main-bg-color);
   font-family: "Zen Maru Gothic", sans-serif;
   color: #2E2E2E;
 }
