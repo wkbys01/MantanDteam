@@ -1,3 +1,5 @@
+/* サイドバーのスタイル */
+
 .container {
   /* background-color: #999; */
   position: fixed;
@@ -9,16 +11,16 @@
   height: 740px;
   text-align: center;
 }
-.container div {
-  border-radius: 20px;
-}
-
 .h_50 {
   height: 50px;
 }
 .h_65 {
   height: 65px;
 }
+.round {
+  border-radius: 20px;
+}
+
 
 .page_btn,
 .popup_btn {
@@ -72,6 +74,13 @@
 .language_box img {
   width: 40px;
 }
+.langage_txt {
+  color: #666666;
+}
+.ja_txt {
+  color: #2E2E2E;
+  font-weight: bold;
+}
 
 .order_list_box {
   background-color: #FFF9F9;
@@ -79,11 +88,36 @@
   height: 265px;
   padding: 5px 15px;
   font-size: 20px;
+  text-align: left;
   border: 1px solid #BCAAA4;
   overflow: scroll;
 }
-.order_list li {
-  height: 50px;
+.order_separator {
+  border-bottom: 2px solid #BCAAA4;
+  border-radius: 0;
+}
+.order_menu_txt,
+.order_option_txt {
+  min-height: 50px;
   padding: 15px 3px;
-  border-bottom: 1px solid #2E2E2E;
+  border-bottom: 3px dotted #BCAAA4;
+}
+.order_menu_txt:last-child,
+.order_option_txt:last-child {
+  border-bottom: none;
+}
+.order_menu_txt {
+  display: flex;
+  align-items: center;
+}
+.order_menu_txt::after {
+  content: '1';
+  padding: 0 10px;
+  font-weight: bold;
+}
+.order_option_txt {
+  padding-left: 20px;
+}
+.order_option_txt::before {
+  content: ": ";
 }

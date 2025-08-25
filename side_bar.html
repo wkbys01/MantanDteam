@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>マンタン</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>マンタン</title><link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/side_bar.css">
@@ -16,63 +15,74 @@
   <main>
     
     <div class="container">
+      <!-- jsで選択時のスタイルを実装予定 -->
       <div class="language_box">
         <button type="button" class="japan_box icon_flex_btn">
           <img src="images/icon/flag_japan.svg" alt="日本国旗">
-          <p>日本語</p>
+          <p class="ja_txt langage_txt">日本語</p>
         </button>
         <button type="button" class="china_box icon_flex_btn">
           <img src="images/icon/flag_china.svg" alt="中国国旗">
-          <p>中文</p>
+          <p class="cn_txt langage_txt">中文</p>
         </button>
         <button type="button" class="japan_box icon_flex_btn">
           <img src="images/icon/flag_japan.svg" alt="英語圏国旗">
-          <p>English</p>
+          <p class="en_txt langage_txt">English</p>
         </button>
       </div>
 
-      <div class="list_btn popup_btn h_50">
+      <div class="list_btn popup_btn h_50 round">
         <button type="button" class="icon_flex_btn">
           <img src="images/icon/icon_cart01.svg" alt="ショッピングカート" class="icon_img">
           <p>注文リスト</p>
         </button>
       </div>
 
-      <div class="order_list_box">
+      <div class="order_list_box round">
         <ul class="order_list">
-          <!-- jsで置き換える予定 -->
-          <li>メニュー名メニュー名</li>
-          <li>メニュー名</li>
-          <li>メニュー名</li>
-          <li>メニュー名</li>
-          <li>メニュー名</li>
-          <li>メニュー名</li>
-          <li>メニュー名</li>
+          
+          <!-- テスト用 jsで置き換える予定 -->
+          <div class="order_separator">
+            <li class="order_menu_txt">満腹まんたんセット</li>
+            <li class="order_option_txt">トッピング</li>
+            <li class="order_option_txt">ドリンクバー</li>
+          </div>
+          <div class="order_separator">
+            <li class="order_menu_txt">たっぷりチーズのドリア</li>
+          </div>
+          <div class="order_separator">
+            <li class="order_menu_txt">ふわとろオムライス</li>
+            <li class="order_option_txt">デミグラス</li>
+          </div>
+          <div class="order_separator">
+            <li class="order_menu_txt">まんたんハンバーグ定食</li>
+          </div>
+          
         </ul>
       </div>
 
-      <div class="order_btn popup_btn h_65">
+      <div class="order_btn popup_btn h_65 round">
         <button type="button" class="icon_flex_btn">
           <img src="images/icon/icon_cart01.svg" alt="ショッピングカート" class="icon_img">
           <p>注文確定</p>
         </button>
       </div>
 
-      <div class="history_btn page_btn h_50">
+      <div class="history_btn page_btn h_50 round">
         <a href="#" class="icon_flex_btn">
           <img src="images/icon/icon_history.svg" alt="履歴" class="icon_img">
           注文履歴
         </a>
       </div>
 
-      <div class="call_btn popup_btn h_50">
+      <div class="call_btn popup_btn h_50 round">
         <button type="button" class="icon_flex_btn">
           <img src="images/icon/icon_bell01.svg" alt="ベル" class="icon_img">
           <p>呼び出し</p>
         </button>
       </div>
 
-      <div class="checkout_btn popup_btn h_65">
+      <div class="checkout_btn popup_btn h_65 round">
         <button type="button" class="icon_flex_btn">
           <img src="images/icon/icon_checkout01.svg" alt="お金" class="icon_img">
           <p>お会計</p>
