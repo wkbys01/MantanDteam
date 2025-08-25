@@ -1,7 +1,6 @@
 /* topページのスタイル */
 
 .container {
-  background-color: #999;
   width: calc(100% - 238px - 20px);
   font-size: 35px;
   font-weight: var(--font-bold);
@@ -47,7 +46,6 @@
   display: block;
   width: 100%;
   height: 100%;
-  /* padding: calc((50% - 35px) / 2); */
 }
 .btn_txt {
   position: absolute;
@@ -60,7 +58,7 @@
   width: 45%;
   padding: 15px 0;
 }
-.padding_btm {
+.spacer {
   display: block;
   padding-bottom: 35px;
 }
