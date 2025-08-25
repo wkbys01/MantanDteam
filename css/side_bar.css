@@ -1,7 +1,6 @@
 /* サイドバーのスタイル */
 
 .container {
-  /* background-color: #999; */
   position: fixed;
   right: 30px;
   display: flex;
