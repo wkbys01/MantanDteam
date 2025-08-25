@@ -41,6 +41,7 @@
   position: relative;
   background-color: var(--secondary-bg-gray);
   text-align: center;
+  border-radius: 20px;
 }
 .link_btn a {
   display: block;
@@ -56,5 +57,10 @@
   width: 100%;
 }
 .btn_txt img {
-  width: 50%;
+  width: 45%;
+  padding: 15px 0;
+}
+.padding_btm {
+  display: block;
+  padding-bottom: 35px;
 }
