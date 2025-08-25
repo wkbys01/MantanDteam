@@ -4,12 +4,11 @@
 :root {
   --main-bg-color: #FFF2E2;
   --secondary-bg-white: #FFF9F9;
-  --secondary-bg-soft-orange: #FFB35D;
   --secondary-bg-gray: #CACACA;
-
-  --accent-orange: #F57C00;
-  --accent-red: #FF6565;
-  --accent-yellow: #FFE225;
+  --secondary-bg-soft-orange: #FFB35D;
+  --secondary-bg-orange: #F57C00;
+  --secondary-bg-red: #FF6565;
+  --secondary-bg-yellow: #FFE225;
 
   --shadow-soft-orange: #D97847;
   --shadow-orange: #C35A25;
