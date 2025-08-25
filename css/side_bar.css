@@ -24,7 +24,7 @@
 .page_btn,
 .popup_btn {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: var(--font-midium);
 }
 .list_btn,
 .history_btn,
@@ -78,7 +78,7 @@
 }
 .ja_txt {
   color: var(--main-font-color);
-  font-weight: bold;
+  font-weight: var(--font-bold);
 }
 
 .order_list_box {
@@ -112,7 +112,7 @@
 .order_menu_txt::after {
   content: '1';
   padding: 0 10px;
-  font-weight: bold;
+  font-weight: var(--font-bold);
 }
 .order_option_txt {
   padding-left: 20px;

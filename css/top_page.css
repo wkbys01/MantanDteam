@@ -4,7 +4,7 @@
   background-color: #999;
   width: calc(100% - 238px);
   font-size: 35px;
-  font-weight: bold;
+  font-weight: var(--font-bold);
 }
 .container,
 .left_container,
