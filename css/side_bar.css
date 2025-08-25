@@ -1,3 +1,5 @@
+/* サイドバーのスタイル */
+
 .container {
   /* background-color: #999; */
   position: fixed;
@@ -9,35 +11,35 @@
   height: 740px;
   text-align: center;
 }
-.container div {
-  border-radius: 20px;
-}
-
 .h_50 {
   height: 50px;
 }
 .h_65 {
   height: 65px;
 }
+.round {
+  border-radius: 20px;
+}
+
 
 .page_btn,
 .popup_btn {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 500;
 }
 .list_btn,
 .history_btn,
 .call_btn {
-  background-color: #FFB35D;
-  box-shadow: 0 5px 3px #D97847;
+  background-color: var(--secondary-bg-soft-orange);
+  box-shadow: 0 5px 3px var(--shadow-soft-orange);
 }
 .order_btn {
-  background-color: #FF6565;
-  box-shadow: 0 5px 3px #AE4747;
+  background-color: var(--secondary-bg-red);
+  box-shadow: 0 5px 3px var(--shadow-red);
 }
 .checkout_btn {
-  background-color: #FFE225;
-  box-shadow: 0 5px 3px #E8AD0E;
+  background-color: var(--secondary-bg-yellow);
+  box-shadow: 0 5px 3px var(--shadow-yellow);
 }
 
 .icon_flex_btn {
@@ -67,23 +69,55 @@
 }
 .language_box button {
   height: 40px;
-  border-bottom: 1px solid #2E2E2E;
+  border-bottom: 1px solid var(--main-font-color);
 }
 .language_box img {
   width: 40px;
 }
+.langage_txt {
+  color: #666666;
+}
+.ja_txt {
+  color: var(--main-font-color);
+  font-weight: bold;
+}
 
 .order_list_box {
-  background-color: #FFF9F9;
+  background-color: var(--secondary-bg-white);
   width: 100%;
   height: 265px;
   padding: 5px 15px;
   font-size: 20px;
-  border: 1px solid #BCAAA4;
+  text-align: left;
+  border: 1px solid var(--main-line-color);
   overflow: scroll;
 }
-.order_list li {
-  height: 50px;
+.order_separator {
+  border-bottom: 2px solid var(--main-line-color);
+  border-radius: 0;
+}
+.order_menu_txt,
+.order_option_txt {
+  min-height: 50px;
   padding: 15px 3px;
-  border-bottom: 1px solid #2E2E2E;
+  border-bottom: 3px dotted var(--main-line-color);
+}
+.order_menu_txt:last-child,
+.order_option_txt:last-child {
+  border-bottom: none;
+}
+.order_menu_txt {
+  display: flex;
+  align-items: center;
+}
+.order_menu_txt::after {
+  content: '1';
+  padding: 0 10px;
+  font-weight: bold;
+}
+.order_option_txt {
+  padding-left: 20px;
+}
+.order_option_txt::before {
+  content: ": ";
 }
