@@ -10,7 +10,6 @@
     "areaB areaE areaF areaG";
   gap: 20px;
 
-  /* width: calc(100% - 238px - 20px); */
   font-size: 35px;
   font-weight: var(--font-bold);
 }
@@ -39,9 +38,17 @@
   border-radius: 20px;
 }
 .link_btn a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 100%;
   height: 100%;
+
+  /* 文字縁取り */
+  -webkit-text-stroke: 4px #fff;
+  paint-order: stroke;
 
   /* オーバーレイの上に文字が表示されるように */
   z-index: 1;
@@ -83,74 +90,3 @@
   grid-area: areaG;
   background-image: url("../images/top_page/top_drink_dessert.jpg");
 }
-
-/* .container,
-.left_container,
-.right_container {
-  display: flex;
-  gap: 20px;
-}
-.left_container,
-.right_container {
-  flex-direction: column;
-  width: 50%;
-}
-.upper_right_container,
-.lower_right_container {
-  display: flex;
-  gap: 20px;
-}
-.upper_right_container {
-  flex-direction: column;
-}
-
-.left_container .link_btn,
-.lower_right_container .link_btn {
-  height: 360px;
-}
-.upper_right_container .link_btn {
-  height: 170px;
-}
-.lower_right_container .link_btn {
-  width: calc(100% / 3);
-}*/
-
-/* .link_btn {
-  position: relative;
-  text-align: center;
-  border-radius: 20px;
-  background-size: cover;
-} */
-
-/*
-.recommend_btn {
-  background-image: url("../images/top_page/top_recommend_limited.jpg");
-}
-.grand_btn {
-  background-image: url("../images/top_page/top_grand.jpg");
-}
-.set_meal_btn {
-  background-image: url("../images/top_page/top_set_meal.jpg");
-}
-.set_btn {
-  background-image: url("../images/top_page/top_set.jpg");
-}
-.child_single_btn {
-  background-image: url("../images/top_page/top_child_single.jpg");
-}
-.take_out_btn {
-  background-image: url("../images/top_page/top_take_out.jpg");
-}
-.drink_dessert_btn {
-  background-image: url("../images/top_page/top_drink_dessert.jpg");
-}
-
-.btn_txt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-*/
-
