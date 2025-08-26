@@ -1,0 +1,92 @@
+/* topページのスタイル */
+
+.container {
+  display: grid;
+  grid-template-rows: 170px 170px 360px;
+  grid-template-columns: 481px 145px 145px 145px;
+  grid-template-areas: 
+    "areaA areaC areaC areaC"
+    "areaA areaD areaD areaD"
+    "areaB areaE areaF areaG";
+  gap: 20px;
+
+  font-size: 35px;
+  font-weight: var(--font-bold);
+}
+
+.link_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.link_btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 83%;
+  background: linear-gradient(rgba(255, 255, 255, 0.3),  rgba(255, 255, 255, 0.3));
+  border-radius: 20px;
+}
+.link_btn a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  /* 文字縁取り */
+  -webkit-text-stroke: 4px #fff;
+  paint-order: stroke;
+
+  /* オーバーレイの上に文字が表示されるように */
+  z-index: 1;
+}
+.btn_txt img {
+  width: 45%;
+  padding: 15px 0;
+}
+.spacer {
+  display: block;
+  padding-bottom: 35px;
+}
+
+.recommend_btn {
+  grid-area: areaA;
+  background-image: url("../images/top_page/top_recommend_limited.jpg");
+}
+.grand_btn {
+  grid-area: areaB;
+  background-image: url("../images/top_page/top_grand.jpg");
+}
+.set_meal_btn {
+  grid-area: areaC;
+  background-image: url("../images/top_page/top_set_meal.jpg");
+}
+.set_btn {
+  grid-area: areaD;
+  background-image: url("../images/top_page/top_set.jpg");
+}
+.child_single_btn {
+  grid-area: areaE;
+  background-image: url("../images/top_page/top_child_single.jpg");
+}
+.take_out_btn {
+  grid-area: areaF;
+  background-image: url("../images/top_page/top_take_out.jpg");
+}
+.drink_dessert_btn {
+  grid-area: areaG;
+  background-image: url("../images/top_page/top_drink_dessert.jpg");
+}

@@ -1,7 +1,7 @@
 /* 共通設定 */
 
-/* ===== 色設定 ===== */
 :root {
+  /* ===== カラー ===== */
   --main-bg-color: #FFF2E2;
   --secondary-bg-white: #FFF9F9;
   --secondary-bg-gray: #CACACA;
@@ -19,6 +19,12 @@
   --secondary-font-color: #666666;
 
   --main-line-color: #BCAAA4;
+
+
+  /* ===== フォントサイズ ===== */
+  --font-bold: 700;
+  --font-midium: 500;
+  --font-regular: 400;
 }
 
 
