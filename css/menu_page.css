@@ -1,0 +1,216 @@
+/* menuページのスタイル */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: calc(100% - 238px - 20px);
+}
+.flex_bar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+} 
+
+/* === トップバー === */
+.top_bar_container {
+  display: flex;
+  gap: 10px;
+  height: 80px;
+  font-size: 16px;
+  font-weight: var(--font-bold);  
+
+}
+/* トップボタン */
+.top_btn {
+  background-color: var(--secondary-bg-white);
+  justify-content: center;
+  gap: 5px;
+  width: 104px;
+  height: 100%;
+  font-size: 24px;
+  font-weight: var(--font-bold);
+  border: 1px solid var(--main-line-color);
+  border-radius: 15px;
+}
+.top_icon {
+  width: 40px;
+  border-radius: 50%;
+}
+.top_icon img {
+  border-radius: 50%;
+}
+
+/* メインカテゴリ */
+.main_category_bar {
+  width: 848px;
+  height: 100%;
+  border: 1px solid var(--main-line-color);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.main_category {
+  background-color: var(--secondary-bg-white);
+  position: relative;
+  width: calc(100% / 7);
+  height: 100%;
+  border-right: 1px solid var(--main-line-color);
+}
+.main_category:last-child {
+  border-right: none;
+}
+
+.one_category_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.two_categories_btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  border-right: 1px solid var(--main-font-color);
+  transform: rotate(65deg);
+}
+.two_categories_btn
+.first_txt {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.two_categories_btn
+.second_txt {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+/* メインカテゴリを押された時のデザイン(仮) */
+#pressed_main_category {
+  background-color: var(--secondary-bg-orange);
+  color: var(--secondary-font-white);
+  box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
+#pressed_main_category .two_categories_btn::after {
+  border-right: 1px solid var(--secondary-font-white);
+} 
+
+
+/* === メインコンテナ === */
+.main_container {
+  background-color: var(--secondary-bg-soft-orange);
+  width: 100%;
+  height: 582px;
+  border: 1px solid var(--main-line-color);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* サブカテゴリ */
+.sub_category_bar {
+  width: 100%;
+  height: 60px;
+}
+.sub_category {
+  background-color: var(--secondary-bg-white);
+  position: relative;
+  width: calc(100% / 9);
+  height: 100%;
+  border-right: 1px solid var(--main-line-color);
+}
+.sub_category_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  font-weight: var(--font-bold);
+}
+.sub_category:last-child {
+  border-right: none;
+}
+/* サブカテゴリを押された時のデザイン(仮) */
+#pressed_sub_category {
+  background-color: var(--secondary-bg-soft-orange);
+  box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* メニュー一覧 */
+.menu_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px 10px;
+  height: 522px;
+  padding: 34px 20px;
+}
+.menu_content {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+}
+.menu_content_btn {
+  background-color: var(--secondary-bg-white);
+}
+.menu_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  height: 64px;
+}
+.menu_name {
+  font-size: 20px;
+  font-weight: var(--font-bold);
+}
+.price_txt {
+  color: var(--secondary-font-color);
+}
+
+/* === ページ移行ボタン === */
+.movement_btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+}
+.movement_btn {
+  background-color: var(--secondary-bg-orange);
+  position: relative;
+  width: 50px;
+  height: 100%;
+  border-radius: 50%;
+}
+.movement_btn::after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 22%;
+  width: 20px;    /* くの字を山なりに見た時、左側の長さ */
+  height: 20px;   /* くの字を山なりに見た時、右側の長さ */
+  border-top: 2px solid var(--secondary-font-white);     /* くの字を山なりに見た時、左側の太さと色 */
+  border-right: 2px solid var(--secondary-font-white);   /* くの字を山なりに見た時、右側の太さと色 */
+  transform: rotate(45deg);    /* くの字の向き */
+}
+.left_btn {
+  transform: rotate(180deg);    /* くの字の向き */
+}
+.page_count {
+  display: flex;
+  font-size: 35px;
+  font-weight: var(--font-midium);
+}
