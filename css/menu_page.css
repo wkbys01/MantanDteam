@@ -59,7 +59,6 @@
   border-right: none;
 }
 
-
 .one_category_btn {
   position: absolute;
   top: 50%;
@@ -87,6 +86,17 @@
   bottom: 10px;
   right: 10px;
 }
+
+
+/* メインカテゴリを押された時のデザイン(仮) */
+#recommended {
+  background-color: var(--secondary-bg-orange);
+  color: var(--secondary-font-white);
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+#recommended .two_categories_btn::after {
+  border-right: 1px solid var(--secondary-font-white);
+} 
 
 
 /* === メインコンテナ === */
