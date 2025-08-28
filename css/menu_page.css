@@ -89,19 +89,19 @@
 
 
 /* メインカテゴリを押された時のデザイン(仮) */
-#recommended {
+#pressed_main_category {
   background-color: var(--secondary-bg-orange);
   color: var(--secondary-font-white);
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.2);
 }
-#recommended .two_categories_btn::after {
+#pressed_main_category .two_categories_btn::after {
   border-right: 1px solid var(--secondary-font-white);
 } 
 
 
 /* === メインコンテナ === */
 .main_container {
-  background-color: #999;
+  background-color: var(--secondary-bg-soft-orange);
   width: 100%;
   height: 582px;
   border: 1px solid var(--main-line-color);
@@ -134,16 +134,45 @@
 .sub_category:last-child {
   border-right: none;
 }
+/* サブカテゴリを押された時のデザイン(仮) */
+#pressed_sub_category {
+  background-color: var(--secondary-bg-soft-orange);
+  box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
 
-
-.menu_box {
-  /* column-count: 2; */
+/* メニュー一覧 */
+.menu_list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 14px 10px;
+  height: 522px;
+  padding: 34px 20px;
 }
-
-.menu_content_btn {
+.menu_content {
   width: 220px;
   height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
 }
+.menu_content_btn {
+  background-color: var(--secondary-bg-white);
+}
+.menu_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  height: 64px;
+}
+.menu_name {
+  font-size: 20px;
+  font-weight: var(--font-bold);
+}
+.price_txt {
+  color: var(--secondary-font-color);
+}
+
