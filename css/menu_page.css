@@ -1,1 +1,79 @@
 /* menuページのスタイル */
+.container {
+  width: calc(100% - 238px - 20px);
+}
+.flex_bar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: var(--secondary-bg-white);
+} 
+.top_bar_container {
+  background-color: #cacaca;
+  display: flex;
+  gap: 10px;
+  height: 80px;
+  font-size: 16px;
+  font-weight: var(--font-bold);
+}
+.top_btn {
+  justify-content: center;
+  width: 104px;
+  height: 100%;
+  font-size: 24px;
+  font-weight: var(--font-bold);
+  border: 1px solid var(--main-line-color);
+  border-radius: 15px;
+}
+.top_icon {
+  width: 40px;
+  border-radius: 50%;
+}
+.top_icon img {
+  border-radius: 50%;
+}
+
+.main_category_bar {
+  width: 848px;
+  height: 100%;
+  border: 1px solid var(--main-line-color);
+  border-radius: 15px;
+}
+.main_category {
+  position: relative;
+  width: calc(100% / 7);
+  height: 100%;
+  border-right: 1px solid var(--main-line-color);
+}
+.main_category:last-child {
+  border-right: none;
+}
+
+
+.one_category_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.two_categories_btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  border-right: 1px solid var(--main-font-color);
+  transform: rotate(65deg);
+}
+.two_categories_btn
+.first_txt {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.two_categories_btn
+.second_txt {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
