@@ -2,7 +2,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   width: calc(100% - 238px - 20px);
 }
 .flex_bar {
@@ -176,3 +176,41 @@
   color: var(--secondary-font-color);
 }
 
+/* === ページ移行ボタン === */
+.movement_btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+}
+.movement_btn {
+  background-color: var(--secondary-bg-orange);
+  position: relative;
+  width: 50px;
+  height: 100%;
+  border-radius: 50%;
+}
+.movement_btn::after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 22%;
+  width: 20px;    /* くの字を山なりに見た時、左側の長さ */
+  height: 20px;   /* くの字を山なりに見た時、右側の長さ */
+  border-top: 2px solid var(--secondary-font-white);     /* くの字を山なりに見た時、左側の太さと色 */
+  border-right: 2px solid var(--secondary-font-white);   /* くの字を山なりに見た時、右側の太さと色 */
+  transform: rotate(45deg);    /* くの字の向き */
+}
+.left_btn {
+  transform: rotate(180deg);    /* くの字の向き */
+}
+.page_count {
+  display: flex;
+  font-size: 35px;
+  font-weight: var(--font-midium);
+}
