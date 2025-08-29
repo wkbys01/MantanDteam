@@ -5,7 +5,8 @@
 1. .envファイルを作成<br>
     ファイル構成：order_app/.env
 
-2. .envファイルにコピペ
+2. .envファイルにコピペ<br>
+    slackに記載
 
 3. 順番にコマンドを実行<br>
     docker compose build<br>
