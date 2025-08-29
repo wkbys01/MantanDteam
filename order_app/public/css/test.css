@@ -1,0 +1,11 @@
+.test_div{
+    background-color: aqua;
+    width: 500px;
+    height: 400px;
+}
+
+.test_div p{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
