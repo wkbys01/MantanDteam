@@ -17,3 +17,11 @@
 4. コンテナ内に出てもう一度立ち上げ<br>
     docker compose build<br>
     docker compose up -d
+
+### DB Sedder作成
+1. コンテナ内に入る<br>
+    docker compose run app bash
+
+2. 全てのDBをリセットしてシーダー読み込み<br>
+    php artisan migrate:fresh --seed<br>
+    *今回は運用前なので問題なし
