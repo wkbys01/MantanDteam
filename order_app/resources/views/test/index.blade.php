@@ -8,12 +8,18 @@
     <title>テストページ</title>
 </head>
 <body>
-    @foreach ($main_categories as $main)
+    @foreach ($main_category as $main)
     <div class="test_div">
-        <p>
-            {!! str_replace(['オススメ' , 'お子さまメニュー' , 'ドリンク'], ['オススメ<br>' , 'お子さま<br>メニュー<br>' , 'ドリンク<br>'], $main->translations['ja']) !!}
-        </p>
+        @if (is_array($main->translations['ja']))
+            {{-- 配列の場合：行ごとに出力 --}}
+            @foreach ($main->translations['ja'] as $line)
+                <p>{{ $line }}</p>
+            @endforeach
+        @else
+            {{-- 文字列の場合：そのまま1行出力 --}}
+            <p>{{ $main->translations['ja'] }}</p>
+        @endif
     </div>
-    @endforeach
+@endforeach
 </body>
 </html>
