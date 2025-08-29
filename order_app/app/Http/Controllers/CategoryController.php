@@ -12,4 +12,9 @@ class CategoryController extends Controller
         $main_categories = Main_categories::all();
         return view('test.index', compact('main_categories'));
     }
+
+    public function top_page(){
+        $main_categories = Main_categories::all();
+        return view('menus.top', compact('main_categories'));
+    }
 }

@@ -14,9 +14,7 @@ Route::get('/layouts', function () {
     return view('layouts.side_bar');
 });
 
-Route::get('/top_page', function () {
-    return view('menus.top');
-});
+Route::get('/top_page', [CategoryController::class, 'top_page'])->name("top_page");
 
 Route::get('/menu_page', function () {
     return view('menus.menu');
