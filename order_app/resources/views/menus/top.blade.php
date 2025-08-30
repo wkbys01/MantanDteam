@@ -19,7 +19,7 @@
 
     <div class="top_page_container">
       <div class="recommend_btn link_btn">
-        <a href="menu_page.html">
+        <a href="{{ route('menu_page') }}">
           <div class="btn_txt">
             <div class="spacer">オススメ</div>
             <div>期間限定メニュー</div>
@@ -27,26 +27,26 @@
         </a>
       </div>
       <div class="grand_btn link_btn">
-        <a href="menu_page.html">
+        <a href="{{ route('menu_page') }}">
           <p class="btn_txt">グランドメニュー</p>
         </a>
       </div>
 
 
       <div class="set_meal_btn link_btn">
-        <a href="menu_page.html">
+        <a href="{{ route('menu_page') }}">
           <p class="btn_txt">定食</p>
         </a>
       </div>
       <div class="set_btn link_btn">
-        <a href="menu_page.html">
+        <a href="{{ route('menu_page') }}">
           <p class="btn_txt">セットメニュー</p>
         </a>
       </div>
 
 
       <div class="child_single_btn link_btn">
-        <a href="menu_page.html">
+        <a href="{{ route('menu_page') }}">
           <div class="btn_txt">
             <div>お子さまメニュー</div>
             <!-- <img src="images/top_page/top_line.png" alt="#"> -->
@@ -56,12 +56,12 @@
         </a>
       </div>
       <div class="take_out_btn link_btn">
-        <a href="menu_page.html">
+        <a href="{{ route('menu_page') }}">
           <div class="btn_txt">お持ち<span class="spacer"></span>帰り</div>
         </a>
       </div>
       <div class="drink_dessert_btn link_btn">
-        <a href="menu_page.html">
+        <a href="{{ route('menu_page') }}">
           <div class="btn_txt">
             <div>ドリンク</div>
             <!-- <img src="images/top_page/top_line.png" alt="#"> -->

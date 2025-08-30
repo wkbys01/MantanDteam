@@ -1,23 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TopPageController;
+use App\Http\Controllers\MenuPageController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', [CategoryController::class, 'index'])->name("test");
+Route::get('/top_page', [TopPageController::class, 'index'])->name("top_page");
+Route::get('/menu_page', [MenuPageController::class, 'index'])->name("menu_page");
 
 // 確認用（後で削除）
+Route::get('/test', [TopPageController::class, 'test'])->name("test");
+
+
 Route::get('/layouts', function () {
     return view('layouts.side_bar');
-});
-
-Route::get('/top_page', [CategoryController::class, 'top_page'])->name("top_page");
-
-Route::get('/menu_page', function () {
-    return view('menus.menu');
 });
 
 Route::get('/order_page', function () {

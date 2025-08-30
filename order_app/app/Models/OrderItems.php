@@ -4,11 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Menu_allergens extends Model
+class OrderItems extends Model
 {
     //
     protected $fillable = [
+        'order_id',
         'menu_id',
-        'allergen_id',
+        'quantity',
+        'options',
     ];
 }

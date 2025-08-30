@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Menu_options extends Model
+class MenuOptions extends Model
 {
     //
     protected $fillable = [

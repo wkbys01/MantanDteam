@@ -22,7 +22,7 @@
       <div class="top_bar_container flex_bar">
         <div class="top_btn link_btn flex_bar">
           <div class="top_icon"><img src="images/icon/home.svg" alt="#"></div>
-          <a href="top_page.html">Top</a>
+          <a href="{{ route('top_page') }}">Top</a>
         </div>
 
         <ul class="main_category_bar flex_bar">

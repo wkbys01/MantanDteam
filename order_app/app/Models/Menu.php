@@ -4,19 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Main_categories extends Model
+class Menu extends Model
 {
     //
     protected $fillable = [
+        'sub_category_id',
+        'price',
         'translations',
     ];
-    
+
     protected $casts = [
         'translations' => 'array',
     ];
 
-    public function sub_categories()
-    {
-        return $this->hasMany(Sub_categories::class, 'main_category_id');
+    public function sab_categories(){
+        return $this->belongsTo(SubCategory::class);
     }
 }

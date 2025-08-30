@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sub_categories extends Model
+class MenuAllergens extends Model
 {
     //
     protected $fillable = [
-        'main_category_id',
-        'translations',
+        'menu_id',
+        'allergen_id',
     ];
 }
