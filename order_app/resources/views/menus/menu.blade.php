@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="{{ asset('css/menu_page.css') }}">
 </head>
 <body>
-  
+
   <main>
 
-    <div class="container">
+    <div class="menu_page_container">
 
       <div class="top_bar_container flex_bar">
         <div class="top_btn link_btn flex_bar">
@@ -207,7 +207,7 @@
       </div>
 
     </div>
-    
+
   </main>
 
 </body>

@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="{{ asset('css/side_bar.css') }}">
 </head>
 <body>
-  
-  <main>
-    
-    <div class="container">
+
+  <header>
+
+    <div class="side_bar_container">
       <!-- jsで選択時のスタイルを実装予定 -->
       <div class="language_box">
         <button type="button" class="japan_box icon_flex_btn">
@@ -41,7 +41,7 @@
 
       <div class="order_list_box round">
         <ul class="order_list">
-          
+
           <!-- テスト用 jsで置き換える予定 -->
           <div class="order_separator">
             <li class="order_menu_txt">満腹まんたんセット</li>
@@ -58,7 +58,7 @@
           <div class="order_separator">
             <li class="order_menu_txt">まんたんハンバーグ定食</li>
           </div>
-          
+
         </ul>
       </div>
 
@@ -91,7 +91,7 @@
       </div>
     </div>
 
-  </main>
+  </header>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 /* サイドバーのスタイル */
 
-.container {
+.side_bar_container {
   position: fixed;
   right: 30px;
   display: flex;
