@@ -12,7 +12,7 @@
     docker compose build<br>
     docker compose up -d<br>
     docker compose run app bash<br>
-    compose install
+    composer install
 
 4. コンテナ内に出てもう一度立ち上げ<br>
     docker compose build<br>

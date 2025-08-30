@@ -12,10 +12,12 @@
   <link rel="stylesheet" href="{{ asset('css/top_page.css') }}">
 </head>
 <body>
+    @include('layouts.side_bar')
+
   <main>
     <!-- 区切り線は擬似要素に変更する予定 -->
 
-    <div class="container">
+    <div class="top_page_container">
       <div class="recommend_btn link_btn">
         <a href="menu_page.html">
           <div class="btn_txt">
@@ -29,8 +31,8 @@
           <p class="btn_txt">グランドメニュー</p>
         </a>
       </div>
-      
-      
+
+
       <div class="set_meal_btn link_btn">
         <a href="menu_page.html">
           <p class="btn_txt">定食</p>
@@ -41,7 +43,7 @@
           <p class="btn_txt">セットメニュー</p>
         </a>
       </div>
-        
+
 
       <div class="child_single_btn link_btn">
         <a href="menu_page.html">
