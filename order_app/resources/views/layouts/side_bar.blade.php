@@ -31,62 +31,58 @@
             </button>
         </div>
 
-        <div class="list_btn popup_btn h_50 round">
-            <button type="button" class="icon_flex_btn">
-                <img src="images/icon/icon_cart01.svg" alt="ショッピングカート" class="icon_img">
-                <p>注文リスト</p>
-            </button>
-        </div>
 
-        <div class="order_list_box round">
-            <ul class="order_list">
-
-                <!-- テスト用 jsで置き換える予定 -->
-                <div class="order_separator">
-                    <li class="order_menu_txt">満腹まんたんセット</li>
-                    <li class="order_option_txt">トッピング</li>
-                    <li class="order_option_txt">ドリンクバー</li>
-                </div>
-                <div class="order_separator">
-                    <li class="order_menu_txt">たっぷりチーズのドリア</li>
-                </div>
-                <div class="order_separator">
-                    <li class="order_menu_txt">ふわとろオムライス</li>
-                    <li class="order_option_txt">デミグラス</li>
-                </div>
-                <div class="order_separator">
-                    <li class="order_menu_txt">まんたんハンバーグ定食</li>
-                </div>
-
-            </ul>
-        </div>
-
-        <div class="order_btn popup_btn h_65 round">
-            <button type="button" class="icon_flex_btn">
-                <img src="images/icon/icon_cart01.svg" alt="ショッピングカート" class="icon_img">
-                <p>注文確定</p>
-            </button>
-        </div>
-
-        <div class="history_btn page_btn h_50 round">
-            <a href="#" class="icon_flex_btn">
-                <img src="images/icon/icon_history.svg" alt="履歴" class="icon_img">
-                注文履歴
-            </a>
-        </div>
-
-        <div class="call_btn popup_btn h_50 round">
-            <button type="button" class="icon_flex_btn">
-                <img src="images/icon/icon_bell01.svg" alt="ベル" class="icon_img">
-                <p>呼び出し</p>
-            </button>
-        </div>
-
-        <div class="checkout_btn popup_btn h_65 round">
-            <button type="button" class="icon_flex_btn">
-                <img src="images/icon/icon_checkout01.svg" alt="お金" class="icon_img">
-                <p>お会計</p>
-            </button>
+        <div class="btn_list">
+            <div class="list_btn popup_btn h_50 round">
+                <button type="button" class="icon_flex_btn">
+                    <img src="images/icon/icon_cart01.svg" alt="ショッピングカート" class="icon_img">
+                    <p>注文リスト</p>
+                </button>
+            </div>
+            <div class="order_list_box round">
+                <ul class="order_list">
+                    <!-- テスト用 jsで置き換える予定 -->
+                    <div class="order_separator">
+                        <li class="order_menu_txt">満腹まんたんセット</li>
+                        <li class="order_option_txt">トッピング</li>
+                        <li class="order_option_txt">ドリンクバー</li>
+                    </div>
+                    <div class="order_separator">
+                        <li class="order_menu_txt">たっぷりチーズのドリア</li>
+                    </div>
+                    <div class="order_separator">
+                        <li class="order_menu_txt">ふわとろオムライス</li>
+                        <li class="order_option_txt">デミグラス</li>
+                    </div>
+                    <div class="order_separator">
+                        <li class="order_menu_txt">まんたんハンバーグ定食</li>
+                    </div>
+                </ul>
+            </div>
+            <div class="order_btn popup_btn h_65 round">
+                <button type="button" class="icon_flex_btn">
+                    <img src="images/icon/icon_cart01.svg" alt="ショッピングカート" class="icon_img">
+                    <p>注文確定</p>
+                </button>
+            </div>
+            <div class="history_btn page_btn h_50 round">
+                <a href="#" class="icon_flex_btn">
+                    <img src="images/icon/icon_history.svg" alt="履歴" class="icon_img">
+                    注文履歴
+                </a>
+            </div>
+            <div class="call_btn popup_btn h_50 round">
+                <button type="button" class="icon_flex_btn">
+                    <img src="images/icon/icon_bell01.svg" alt="ベル" class="icon_img">
+                    <p>呼び出し</p>
+                </button>
+            </div>
+            <div class="checkout_btn popup_btn h_65 round">
+                <button type="button" class="icon_flex_btn">
+                    <img src="images/icon/icon_checkout01.svg" alt="お金" class="icon_img">
+                    <p>お会計</p>
+                </button>
+            </div>
         </div>
 
     </header>
