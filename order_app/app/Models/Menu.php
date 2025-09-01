@@ -17,7 +17,7 @@ class Menu extends Model
         'translations' => 'array',
     ];
 
-    public function sab_categories(){
+    public function sabCategory(){
         return $this->belongsTo(SubCategory::class);
     }
 }
