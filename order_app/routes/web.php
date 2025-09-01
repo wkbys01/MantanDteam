@@ -30,3 +30,7 @@ Route::get('/call_page', function () {
 Route::get('/checkout_page', function () {
     return view('menus.checkout');
 });
+
+Route::get('/pop_up', function () {
+    return view('layouts.dialog');
+});
