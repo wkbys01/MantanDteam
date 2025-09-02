@@ -24,13 +24,6 @@
         </div>
     </div>
 
-    <div class="test_btn">
-        <button id="callBtn">呼び出し</button>
-        <button id="orderBtn">注文確定</button>
-        <button id="checkoutBtn">会計</button>
-    </div>
-
-
-    <script src="{{ asset('js/dialog.js') }}"></script>
+    {{-- <script src="{{ asset('js/dialog.js') }}"></script> --}}
 </body>
 </html>

@@ -1,49 +1,70 @@
-const dialog = document.getElementById("dialog");
-const dialogTxt = document.getElementById("dialogTxt");
-const noticeTxt = document.getElementById("noticeTxt");
+document.addEventListener("DOMContentLoaded", function() {
+    // ====== 要素の定義 ======
 
-// テスト用ボタン
-// const button = document.getElementsByTagName("button");
-const callBtn = document.getElementById("callBtn");
-const orderBtn = document.getElementById("orderBtn");
-const checkoutBtn = document.getElementById("checkoutBtn");
+    // ダイアログの要素を取得
+    const dialog = document.getElementById("dialog");
+    const dialogTxt = document.getElementById("dialogTxt");
+    const noticeTxt = document.getElementById("noticeTxt");
+    const yesBtn = document.getElementById("yesBtn");
+    const cancelBtn = document.getElementById("cancelBtn");
+
+    // サイドバーのボタンを取得
+    const listBtn = document.getElementById("listBtn");
+    const orderBtn = document.getElementById("orderBtn");
+    const historyBtn = document.getElementById("historyBtn");
+    const callBtn = document.getElementById("callBtn");
+    const checkoutBtn = document.getElementById("checkoutBtn");
 
 
-// =======================
+    // ====== 関数 ======
 
-// 押されたボタンによってダイアログの内容を変える（side_bar.jsに記載する？）
-function handleButtonClick(event) {
-    if (event.target.id === "callBtn") {
-        alert("callボタンが押されました");
-        dialogTxt.innerHTML = "店員を呼び出しますか？";
-        dialog.style.display = "block";
-    }
-    else if (event.target.id === "orderBtn") {
-        alert("orderボタンが押されました");
-        dialogTxt.innerHTML = "注文を確定しますか？";
-        dialog.style.display = "block";
-    }
-    else if (event.target.id === "checkoutBtn") {
-        alert("checkoutボタンが押されました");
-        dialogTxt.innerHTML = "お会計へ進みますか？";
-        noticeTxt.innerHTML = "※お会計以降は注文できません。";
+    // ダイアログを表示
+    function showDialog(message, notice = "") {
+        dialogTxt.textContent = message;
+        noticeTxt.textContent = notice;
+
         dialog.style.display = "block";
     }
 
-}
+    // ダイアログを非表示
+    function hideDialog() {
+        dialog.style.display = "none";
+    }
 
-callBtn.addEventListener("click", handleButtonClick);
-orderBtn.addEventListener("click", handleButtonClick);
-checkoutBtn.addEventListener("click", handleButtonClick);
+    // ボタンクリック時の処理
+    function handleButtonClick(event) {
+        // console.log("選択されたボタンのid：",event.currentTarget.id);
 
-/*
-・デフォルトでは非表示、ボタンを押すと表示
-    →クリックされたらdisplay:blockにする
+        switch (event.currentTarget.id) {
+            case "listBtn":
+                console.log("注文リストボタンが押されました");
+                break;
+            case "orderBtn":;
+                showDialog("注文を確定しますか？");
+                break;
+            case "historyBtn":
+                console.log("注文履歴ボタンが押されました");
+                break;
+            case "callBtn":
+                showDialog("店員を呼び出しますか？");
+                break;
+            case "checkoutBtn":
+                showDialog("お会計へ進みますか？", "※お会計以降は注文できません。");
+                break;
+            default:
+                alert("その他のボタンが押されました");
+                break;
+        }
+    }
 
-・押されたボタンによってダイアログの内容を変える
-    →サイドバーから押されたボタンを取得し、if文で分岐
 
-・はいが押されたらtrue、キャンセル押されたらfalseを返す
-    →サイドバーのjsで受け取り、処理を分ける
+    // ====== イベントリスナー ======
+    listBtn.addEventListener("click", handleButtonClick);
+    orderBtn.addEventListener("click", handleButtonClick);
+    historyBtn.addEventListener("click", handleButtonClick);
+    callBtn.addEventListener("click", handleButtonClick);
+    checkoutBtn.addEventListener("click", handleButtonClick);
 
-*/
+    // ダイアログのキャンセルボタン
+    cancelBtn.addEventListener("click", hideDialog);
+});
