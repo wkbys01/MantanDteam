@@ -13,16 +13,24 @@
 </head>
 <body>
 
-    <div class="dialog_container">
+    <div class="dialog_container" id="dialog">
         <div class="dialog_contents">
-            <h2 class="dialog_txt">お会計へ進みますか？</h2>
-            <p class="notice_txt">※お会計以降は注文できません。</p>
+            <h2 class="dialog_txt" id="dialogTxt"></h2>
+            <p class="notice_txt" id="noticeTxt"></p>
             <div class="dialog_btn_box">
-                <button id="yes">はい</button>
-                <button id="cancel">キャンセル</button>
+                <button type="submit" id="yesBtn">はい</button>
+                <button type="submit" id="cancelBtn">キャンセル</button>
             </div>
         </div>
     </div>
 
+    <div class="test_btn">
+        <button id="callBtn">呼び出し</button>
+        <button id="orderBtn">注文確定</button>
+        <button id="checkoutBtn">会計</button>
+    </div>
+
+
+    <script src="{{ asset('js/dialog.js') }}"></script>
 </body>
 </html>
