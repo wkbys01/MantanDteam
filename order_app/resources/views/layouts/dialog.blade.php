@@ -14,7 +14,7 @@
 <body>
 
     <div class="dialog_container">
-        <div class="dialog_box">
+        <div class="dialog_contents">
             <h2 class="dialog_txt">お会計へ進みますか？</h2>
             <p class="notice_txt">※お会計以降は注文できません。</p>
             <div class="dialog_btn_box">
