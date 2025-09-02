@@ -14,12 +14,13 @@
 <body>
 
     <div class="dialog_container">
-        <h2 class="dialog_txt">お会計へ進みますか？</h2>
-        <p class="notice_txt">※お会計以降は注文できません。</p>
-
-        <div class="dialog_btn_box">
-            <button id="yes">はい</button>
-            <button id="cancel">キャンセル</button>
+        <div class="dialog_box">
+            <h2 class="dialog_txt">お会計へ進みますか？</h2>
+            <p class="notice_txt">※お会計以降は注文できません。</p>
+            <div class="dialog_btn_box">
+                <button id="yes">はい</button>
+                <button id="cancel">キャンセル</button>
+            </div>
         </div>
     </div>
 
