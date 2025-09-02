@@ -13,6 +13,7 @@
 </head>
 <body>
     @include('layouts.side_bar')
+    {{-- @include('layouts.dialog') --}}
 
   <main>
     <!-- 区切り線は擬似要素に変更する予定 -->
