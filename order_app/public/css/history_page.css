@@ -1,0 +1,120 @@
+body {
+    display: grid !important;
+    grid-template-columns: 1fr 300px !important;
+}
+
+.wapper {
+    width: 1280px !important;
+    height: 800px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.main-content {
+    height: 740px !important;
+    margin: 30px !important;
+    padding: 0 !important;
+    background-color: var(--secondary-bg-soft-orange) !important; /* #FFB35D */
+    border-radius: 15px !important;
+}
+
+.header_div {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin: 20px 20px 10px 20px !important;
+}
+
+.header_button {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 260px !important;
+    height: 50px !important;
+    border: none !important;
+    border-radius: 20px !important;
+    background-color: var(--secondary-bg-white) !important;
+    cursor: pointer !important;
+    box-shadow: 0 5px 3px rgba(0,0,0,0.3) !important;
+    font-size: 23px !important;
+}
+
+h1 {
+    font-size: 34px !important;
+    font-weight: var(--font-midium) !important;
+    text-align: left !important;
+}
+
+.footer_div {
+    display: flex !important;
+    margin: 20px 20px !important;
+    align-items: center !important;
+    font-size: 35px !important;
+    gap: 10px !important;
+}
+
+span {
+    font-size: 20px !important;
+    text-align: right !important;
+    margin-left: auto !important;
+}
+
+main {
+    height: 578px !important;
+    margin: 10px 20px !important;
+    overflow: auto !important;
+}
+
+.main-content table thead {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 2 !important;
+    background-color: var(--secondary-bg-orange) !important; /* #F57C00 */
+    color: var(--secondary-font-white) !important; /* #ffffff */
+}
+
+.main-content table {
+    width: 100% !important;
+    font-size: 24px !important;
+}
+
+.main-content table th,
+.main-content table td {
+    border: solid 1px var(--main-line-color) !important; /* #BCAAA4 */
+    vertical-align: middle !important;
+}
+
+.main-content table thead th {
+    height: 65px !important;
+}
+
+.main-content table thead th:first-child {
+    padding-left: 20px !important;
+}
+
+.main-content table thead th:not(:first-child) {
+    width: 140px !important;
+    text-align: center !important;
+}
+
+.main-content table tbody {
+    background-color: var(--secondary-bg-white) !important; /* #FFF9F9 */
+}
+
+.main-content table tbody td.main_td {
+    padding: 15px 366px 15px 10px !important;
+}
+
+.main-content table tbody td.main_td_sab {
+    padding: 15px 307px 15px 66px !important;
+    text-align: left !important;
+}
+
+.main-content table tbody td:not(:first-child) {
+    text-align: center !important;
+}
+
+.main-content table tbody td {
+    height: 50px !important;
+}
