@@ -25,31 +25,57 @@ document.addEventListener("DOMContentLoaded", function() {
 
         dialog.style.display = "block";
     }
-
     // ダイアログを非表示
     function hideDialog() {
         dialog.style.display = "none";
     }
 
+    // ページ遷移
+    function pageTransition() {
+        switch (currentId) {
+            case "orderBtn":
+                location.href = "/order_page"
+                break;
+            case "callBtn":
+                location.href = "/call_page"
+                break;
+            case "checkoutBtn":
+                location.href = "/checkout_page"
+                break;
+            default:
+                alert("ページ遷移できませんでした")
+                break;
+        }
+    }
+
+
+    let currentId = "";
+    let currentAction = "";
+
     // ボタンクリック時の処理
     function handleButtonClick(event) {
-        // console.log("選択されたボタンのid：",event.currentTarget.id);
+        currentId = event.currentTarget.id
 
-        switch (event.currentTarget.id) {
+        switch (currentId) {
             case "listBtn":
-                console.log("注文リストボタンが押されました");
+                showDialog("注文リストを表示します", "これはテストです");
                 break;
-            case "orderBtn":;
+            case "orderBtn":
                 showDialog("注文を確定しますか？");
+                currentAction = "pageTransition";
                 break;
             case "historyBtn":
-                console.log("注文履歴ボタンが押されました");
+                alert("注文履歴ボタン：テストページへ遷移");
+                location.href = "/top_page"   // 仮ページへ遷移
+                // currentAction = "pageTransition";
                 break;
             case "callBtn":
                 showDialog("店員を呼び出しますか？");
+                currentAction = "pageTransition";
                 break;
             case "checkoutBtn":
                 showDialog("お会計へ進みますか？", "※お会計以降は注文できません。");
+                currentAction = "pageTransition";
                 break;
             default:
                 alert("その他のボタンが押されました");
@@ -67,4 +93,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ダイアログのキャンセルボタン
     cancelBtn.addEventListener("click", hideDialog);
+
+    // ダイアログのはいボタン
+    yesBtn.addEventListener("click", () => {
+        switch (currentAction) {
+            case "pageTransition":
+                // alert("ページを移行します");
+                pageTransition()
+                break;
+            default:
+                alert("エラー");
+                hideDialog();
+                break;
+        };
+    });
 });

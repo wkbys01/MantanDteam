@@ -27,7 +27,7 @@
                     <p class="cn_txt langage_txt">中文</p>
                 </button>
                 <button class="japan_box icon_flex_btn">
-                    <img src="images/icon/flag_japan.svg" alt="英語圏国旗">
+                    <img src="images/icon/flag.svg" alt="英語圏国旗">
                     <p class="en_txt langage_txt">English</p>
                 </button>
             </div>
