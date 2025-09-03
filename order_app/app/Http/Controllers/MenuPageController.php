@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 
 class MenuPageController extends Controller
 {
-    //
     public function index(){
         // $subCategory = SubCategory::with('menus')
         //     ->findOrFail($subCategoryId);
