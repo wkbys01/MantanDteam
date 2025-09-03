@@ -31,6 +31,6 @@ Route::get('/checkout_page', function () {
     return view('menus.checkout');
 });
 
-Route::get('/pop_up', function () {
-    return view('layouts.dialog');
+Route::get('/list_details', function () {
+    return view('layouts.list_details');
 });
