@@ -36,8 +36,9 @@
     width: calc(100% - 40px);
 }
 .x_btn {
-    /* 仮 */
-    font-size: 35px;
+    font-size: 60px;
+    font-weight: var(--font-bold);
+    line-height: 0;
 }
 
 h2 {
@@ -65,16 +66,13 @@ tbody {
 }
 th,td {
     height: 60px;
-    padding: 0 12px;
+    padding: 5px 20px;
     vertical-align: middle;
     border: solid 1px var(--main-line-color);
 }
 th {
     background-color: var(--secondary-bg-orange);
     color: var(--secondary-font-white);
-}
-td {
-    /* position: relative; */
 }
 .name_header {
     width: 560px;
@@ -84,12 +82,16 @@ td {
     width: 180px;
     text-align: center;
 }
+
+.option_item .plus_btn {
+    display: none;
+}
 .price {
     text-align: center;
 }
 .price::after,
 .total_price::after {
-    content: "円";
+    content: " 円";
 }
 
 .option_name::before {
@@ -98,20 +100,49 @@ td {
 }
 .quantity_adjust_box {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 20px;
+    width: 150px;
     text-align: center;
-}
-.minus_btn,
-.plus_btn {
-    background-color: var(--secondary-bg-soft-orange);
-    width: 40px;
-    height: 40px;
+    padding-left: 14px;
 }
 .quantity {
     font-size: 35px;
     font-weight: var(--font-bold);
+}
+.minus_btn,
+.plus_btn {
+    background-color: var(--secondary-bg-soft-orange);
+    position: relative;
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+}
+.minus_btn::before {
+    content: '';
+    background-color: var(--main-font-color);
+    display: inline-block;
+    width: 2px;
+    height: 25px;
+    border-radius: 2px;
+    transform: rotate(90deg);
+}
+.plus_btn::before,
+.plus_btn::after  {
+    content: '';
+    background-color: var(--main-font-color);
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 47%;
+    width: 2px;
+    height: 25px;
+    border-radius: 2px;
+}
+.plus_btn::after {
+    top: 8px;
+    left: 47%;
+    transform: rotate(90deg);
 }
 
 .total_price_box {

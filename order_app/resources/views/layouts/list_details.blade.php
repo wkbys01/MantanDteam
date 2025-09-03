@@ -18,7 +18,7 @@
 
             <div class="header_container">
                 <h2>注文リスト</h2>
-                <button class="x_btn">X</button>
+                <button class="x_btn">×</button>
             </div>
 
             <div class="table_container">
@@ -36,9 +36,9 @@
                             <td class="price">900</td>
                             <td>
                                 <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
+                                    <button class="minus_btn"></button>
                                     <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
+                                    <button class="plus_btn"></button>
                                 </div>
                             </td>
                         </tr>
@@ -47,9 +47,9 @@
                             <td class="price">50</td>
                             <td>
                                 <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
+                                    <button class="minus_btn"></button>
                                     <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
+                                    <button class="plus_btn"></button>
                                 </div>
                             </td>
                         </tr>
@@ -58,9 +58,9 @@
                             <td class="price">100</td>
                             <td>
                                 <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
+                                    <button class="minus_btn"></button>
                                     <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
+                                    <button class="plus_btn"></button>
                                 </div>
                             </td>
                         </tr>
@@ -69,9 +69,9 @@
                             <td class="price">900</td>
                             <td>
                                 <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
+                                    <button class="minus_btn"></button>
                                     <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
+                                    <button class="plus_btn"></button>
                                 </div>
                             </td>
                         </tr>
@@ -80,9 +80,9 @@
                             <td class="price">100</td>
                             <td>
                                 <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
+                                    <button class="minus_btn"></button>
                                     <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
+                                    <button class="plus_btn"></button>
                                 </div>
                             </td>
                         </tr>
@@ -91,9 +91,9 @@
                             <td class="price">800</td>
                             <td>
                                 <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
+                                    <button class="minus_btn"></button>
                                     <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
+                                    <button class="plus_btn"></button>
                                 </div>
                             </td>
                         </tr>
@@ -102,9 +102,9 @@
                             <td class="price">50</td>
                             <td>
                                 <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
+                                    <button class="minus_btn"></button>
                                     <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
+                                    <button class="plus_btn"></button>
                                 </div>
                             </td>
                         </tr>
@@ -113,9 +113,9 @@
                             <td class="price">100</td>
                             <td>
                                 <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
+                                    <button class="minus_btn"></button>
                                     <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
+                                    <button class="plus_btn"></button>
                                 </div>
                             </td>
                         </tr>
@@ -124,9 +124,9 @@
                             <td class="price">500</td>
                             <td>
                                 <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
+                                    <button class="minus_btn"></button>
                                     <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
+                                    <button class="plus_btn"></button>
                                 </div>
                             </td>
                         </tr>
@@ -135,9 +135,9 @@
                             <td class="price">300</td>
                             <td>
                                 <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
+                                    <button class="minus_btn"></button>
                                     <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
+                                    <button class="plus_btn"></button>
                                 </div>
                             </td>
                         </tr>
