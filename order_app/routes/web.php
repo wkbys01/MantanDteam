@@ -32,6 +32,10 @@ Route::get('/checkout_page', function () {
     return view('menus.checkout');
 });
 
+Route::get('/history_page', function () {
+    return view('menus.history');
+});
+
 Route::get('/pop_up', function () {
     return view('layouts.dialog');
 });
