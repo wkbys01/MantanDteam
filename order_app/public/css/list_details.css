@@ -60,8 +60,13 @@ thead {
     top: 0;
     z-index: 1;
 }
+tbody {
+    background-color: var(--secondary-bg-white);
+}
 th,td {
     height: 60px;
+    padding: 0 12px;
+    vertical-align: middle;
     border: solid 1px var(--main-line-color);
 }
 th {
@@ -69,7 +74,7 @@ th {
     color: var(--secondary-font-white);
 }
 td {
-    position: relative;
+    /* position: relative; */
 }
 .name_header {
     width: 560px;
@@ -77,18 +82,19 @@ td {
 .price_header,
 .quantity_header {
     width: 180px;
+    text-align: center;
+}
+.price {
+    text-align: center;
+}
+.price::after,
+.total_price::after {
+    content: "円";
 }
 
-/* .price {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
- */
 .option_name::before {
     content: "：";
-    padding-left: 30px;
+    padding-left: 20px;
 }
 .quantity_adjust_box {
     display: flex;

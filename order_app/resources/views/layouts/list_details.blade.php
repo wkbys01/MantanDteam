@@ -33,7 +33,7 @@
                     <tbody>
                         <tr class="main_item">
                             <td>とろけるチーズのデミグラスハンバーグ定食</td>
-                            <td class="price">1,000円</td>
+                            <td class="price">900</td>
                             <td>
                                 <div class="quantity_adjust_box">
                                     <button class="minus_btn">-</button>
@@ -43,8 +43,8 @@
                             </td>
                         </tr>
                         <tr class="option_item">
-                            <td class="option_name">オプション名</td>
-                            <td class="price">100円</td>
+                            <td class="option_name">ライス大</td>
+                            <td class="price">50</td>
                             <td>
                                 <div class="quantity_adjust_box">
                                     <button class="minus_btn">-</button>
@@ -55,7 +55,7 @@
                         </tr>
                         <tr class="option_item">
                             <td class="option_name">ドリンクバー</td>
-                            <td class="price">100円</td>
+                            <td class="price">100</td>
                             <td>
                                 <div class="quantity_adjust_box">
                                     <button class="minus_btn">-</button>
@@ -65,19 +65,8 @@
                             </td>
                         </tr>
                         <tr class="main_item">
-                            <td>とろけるチーズのデミグラスハンバーグ定食</td>
-                            <td class="price">1,000円</td>
-                            <td>
-                                <div class="quantity_adjust_box">
-                                    <button class="minus_btn">-</button>
-                                    <p class="quantity">1</p>
-                                    <button class="plus_btn">+</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="option_item">
-                            <td class="option_name">オプション名</td>
-                            <td class="price">100円</td>
+                            <td>菜の花とホタテのあんかけパスタ</td>
+                            <td class="price">900</td>
                             <td>
                                 <div class="quantity_adjust_box">
                                     <button class="minus_btn">-</button>
@@ -88,7 +77,7 @@
                         </tr>
                         <tr class="option_item">
                             <td class="option_name">ドリンクバー</td>
-                            <td class="price">100円</td>
+                            <td class="price">100</td>
                             <td>
                                 <div class="quantity_adjust_box">
                                     <button class="minus_btn">-</button>
@@ -98,8 +87,8 @@
                             </td>
                         </tr>
                         <tr class="main_item">
-                            <td>とろけるチーズのデミグラスハンバーグ定食</td>
-                            <td class="price">1,000円</td>
+                            <td>夏野菜カレー（ズッキーニ・パプリカ・なす入り）</td>
+                            <td class="price">800</td>
                             <td>
                                 <div class="quantity_adjust_box">
                                     <button class="minus_btn">-</button>
@@ -109,8 +98,8 @@
                             </td>
                         </tr>
                         <tr class="option_item">
-                            <td class="option_name">オプション名</td>
-                            <td class="price">100円</td>
+                            <td class="option_name">ライス大</td>
+                            <td class="price">50</td>
                             <td>
                                 <div class="quantity_adjust_box">
                                     <button class="minus_btn">-</button>
@@ -121,7 +110,29 @@
                         </tr>
                         <tr class="option_item">
                             <td class="option_name">ドリンクバー</td>
-                            <td class="price">100円</td>
+                            <td class="price">100</td>
+                            <td>
+                                <div class="quantity_adjust_box">
+                                    <button class="minus_btn">-</button>
+                                    <p class="quantity">1</p>
+                                    <button class="plus_btn">+</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="main_item">
+                            <td>季節のスペシャルパフェ</td>
+                            <td class="price">500</td>
+                            <td>
+                                <div class="quantity_adjust_box">
+                                    <button class="minus_btn">-</button>
+                                    <p class="quantity">1</p>
+                                    <button class="plus_btn">+</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="main_item">
+                            <td>レモンスカッシュ</td>
+                            <td class="price">300</td>
                             <td>
                                 <div class="quantity_adjust_box">
                                     <button class="minus_btn">-</button>
@@ -137,7 +148,7 @@
             <div class="footer_container">
                 <div class="total_price_box">
                     <p>合計金額：</p>
-                    <p class="total_price">？？？？円</p>
+                    <p class="total_price">？？？？</p>
                 </div>
                 <button class="confirm_btn">注文確定</button>
                         </div>
