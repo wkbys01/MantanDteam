@@ -15,7 +15,7 @@ class MainCategory extends Model
         'translations' => 'array',
     ];
 
-    public function subCategories(){
+    public function sub_Categories(){
         return $this->hasMany(SubCategory::class);
     }
 }

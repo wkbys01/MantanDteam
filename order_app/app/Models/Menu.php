@@ -16,8 +16,4 @@ class Menu extends Model
     protected $casts = [
         'translations' => 'array',
     ];
-
-    public function sabCategory(){
-        return $this->belongsTo(SubCategory::class);
-    }
 }

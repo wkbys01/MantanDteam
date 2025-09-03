@@ -1,7 +1,7 @@
 /* 共通設定 */
 
 :root {
-  /* ===== カラー ===== */
+  /* ボタンや背景の色 */
   --main-bg-color: #FFF2E2;
   --secondary-bg-white: #FFF9F9;
   --secondary-bg-gray: #CACACA;
@@ -10,20 +10,21 @@
   --secondary-bg-red: #FF6565;
   --secondary-bg-yellow: #FFE225;
 
+  /* 影の色 */
   --shadow-soft-orange: #D97847;
   --shadow-orange: #C35A25;
   --shadow-red: #AE4747;
   --shadow-yellow: #E8AD0E;
 
-  /* 名前変更したい */
+  /* フォントの色（名前変更したい） */
   --main-font-color: #2E2E2E;
   --secondary-font-color: #666666;
   --secondary-font-white: #FFF9F9;
 
+  /* 線の色 */
   --main-line-color: #BCAAA4;
 
-
-  /* ===== フォントの太さ ===== */
+  /* フォントの太さ */
   --font-bold: 700;
   --font-midium: 500;
   --font-regular: 400;
