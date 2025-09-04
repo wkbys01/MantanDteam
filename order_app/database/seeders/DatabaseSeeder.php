@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            Main_categoriesSeeder::class,
-            Sub_categoriesSeeder::class,
+            MainCategoriesSeeder::class,
+            SubCategoriesSeeder::class,
             MenusSeeder::class,
         ]);
         

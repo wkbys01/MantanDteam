@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マンタン</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/side_bar_sab.css') }}">
+</head>
+<body>
+
+    <header class="side_bar_container">
+
+        <!-- jsで選択時のスタイルを実装予定 -->
+        <div class="language_container">
+            <div class="language_box">
+                <button type="button" class="japan_box icon_flex_btn">
+                    <img src="images/icon/flag_japan.svg" alt="日本国旗">
+                    <p class="ja_txt langage_txt">日本語</p>
+                </button>
+                <button type="button" class="china_box icon_flex_btn">
+                    <img src="images/icon/flag_china.svg" alt="中国国旗">
+                    <p class="cn_txt langage_txt">中文</p>
+                </button>
+                <button type="button" class="japan_box icon_flex_btn">
+                    <img src="images/icon/flag_japan.svg" alt="英語圏国旗">
+                    <p class="en_txt langage_txt">English</p>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="btn_list_container">
+            <div class="call_btn popup_btn h_50 round">
+                <button type="button" class="icon_flex_btn">
+                    <img src="images/icon/icon_bell01.svg" alt="ベル" class="icon_img">
+                    <p>呼び出し</p>
+                </button>
+            </div>
+            <div class="checkout_btn popup_btn h_65 round">
+                <button type="button" class="icon_flex_btn">
+                    <img src="images/icon/icon_checkout01.svg" alt="お金" class="icon_img">
+                    <p>お会計</p>
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+</body>
+</html>
