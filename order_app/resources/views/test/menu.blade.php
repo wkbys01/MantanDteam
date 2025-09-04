@@ -21,85 +21,38 @@
 
       <div class="top_bar_container flex_bar">
         <div class="top_btn link_btn flex_bar">
-          <div class="top_icon"><img src="images/icon/home.svg" alt="#"></div>
+          <div class="top_icon"><img src="{{ asset('images/icon/home.svg') }}" alt="#"></div>
           <a href="{{ route('top_test') }}">Top</a>
         </div>
-
         <ul class="main_category_bar flex_bar">
-          <li class="main_category" id="pressed_main_category">
-            <button class="main_category_btn two_categories_btn">
-              <div class="main_category_txt first_txt">オススメ</div>
-              <!-- <img src="images/menu_page/line_bk.png" alt=""> -->
-              <div class="main_category_txt second_txt">期間限定</div>
-            </button>
-          </li>
-          <li class="main_category">
-            <button class="main_category_btn one_category_btn">
-              <div class="main_category_txt">グランド</div>
-            </button>
-          </li>
-          <li class="main_category">
-            <button class="main_category_btn one_category_btn">
-              <div class="main_category_txt">定食</div>
-            </button>
-          </li>
-          <li class="main_category">
-            <button class="main_category_btn one_category_btn">
-              <div class="main_category_txt">セット</div>
-            </button>
-          </li>
-          <li class="main_category">
-            <button class="main_category_btn two_categories_btn">
-              <div class="main_category_txt first_txt">お子さま</div>
-              <!-- <img src="images/menu_page/line_bk.png" alt=""> -->
-              <div class="main_category_txt second_txt">単品</div>
-            </button>
-          </li>
-          <li class="main_category">
-            <button class="main_category_btn one_category_btn">
-              <div class="main_category_txt">お持ち帰り</div>
-            </button>
-          </li>
-          <li class="main_category">
-            <button class="main_category_btn two_categories_btn">
-              <div class="main_category_txt first_txt">ドリンク</div>
-              <!-- <img src="images/menu_page/line_bk.png" alt=""> -->
-              <div class="main_category_txt second_txt">デザート</div>
-            </button>
-          </li>
+          @foreach($allMainCategories as $mc)
+            <li class="main_category {{ $mainCategory->id === $mc->id ? 'active' : '' }}">
+              <a href="{{ route('menu_test', ['mainCategoryId' => $mc->id]) }}">
+                <button class="main_category_btn {{ is_array($mc->translations['ja']) ? 'two_categories_btn' : 'one_category_btn' }}">
+                  @if(is_array($mc->translations['ja']))
+                    <div class="main_category_txt first_txt">{{ $mc->translations['ja'][0] }}</div>
+                    <div class="main_category_txt second_txt">{{ $mc->translations['ja'][1] }}</div>
+                  @else
+                    <div class="main_category_txt">{{ $mc->translations['ja'] }}</div>
+                  @endif
+                </button>
+              </a>
+            </li>
+          @endforeach
         </ul>
       </div>
 
       <div class="main_container">
         <ul class="sub_category_bar flex_bar">
-          <!-- php、jsで対応した個数出力 -->
-          <li class="sub_category" id="pressed_sub_category">
-            <button class="sub_category_btn">サブカテゴリ</button>
-          </li>
-          <li class="sub_category">
-            <button class="sub_category_btn">サブカテゴリ</button>
-          </li>
-          <li class="sub_category">
-            <button class="sub_category_btn">サブカテゴリ</button>
-          </li>
-          <li class="sub_category">
-            <button class="sub_category_btn">サブカテゴリ</button>
-          </li>
-          <li class="sub_category">
-            <button class="sub_category_btn">サブカテゴリ</button>
-          </li>
-          <li class="sub_category">
-            <button class="sub_category_btn">サブカテゴリ</button>
-          </li>
-          <li class="sub_category">
-            <button class="sub_category_btn">サブカテゴリ</button>
-          </li>
-          <li class="sub_category">
-            <button class="sub_category_btn">サブカテゴリ</button>
-          </li>
-          <li class="sub_category">
-            <button class="sub_category_btn">サブカテゴリ</button>
-          </li>
+          @foreach($mainCategory->subCategories as $sc)
+            <li class="sub_category {{ $subCategory->id === $sc->id ? 'active' : '' }}">
+              <a href="{{ route('menu_test.sub', ['mainCategoryId' => $mainCategory->id, 'subCategoryId' => $sc->id]) }}">
+                <button class="sub_category_btn">
+                  {{ $sc->translations['ja'] ?? '未設定' }}
+                </button>
+              </a>
+            </li>
+          @endforeach
         </ul>
 
         <div class="menu_container">
@@ -107,9 +60,9 @@
             @foreach($menus as $menu)
             <li class="menu_content">
               <button class="menu_content_btn">
-                <img src="images/menu_page/demi_hamburg.jpg" alt="">
+                <img src="{{ asset('images/menu_page/demi_hamburg.jpg') }}" alt="">
                 <div class="menu_txt">
-                  <div class="menu_name">{{ $menu->translations['ja'] ?? '' }}</div>
+                  <div class="menu_name">{{ $menu->translations['ja'] ?? '商品名' }}</div>
                   <div class="price_txt">{{ $menu->price }}円 (税込)</div>
                 </div>
               </button>
@@ -119,16 +72,6 @@
           </ul>
         </div>
       </div>
-
-      <!-- <div class="movement_btn_container">
-        <button class="left_btn movement_btn"></button>
-        <div class="page_count">
-          <div class="numerator">1</div>
-          <div class="count_line">/</div>
-          <div class="denominator">3</div>
-        </div>
-        <button class="right_btn movement_btn"></button>
-      </div> -->
 
       <div class="movement_btn_container">
           @if ($menus->onFirstPage())

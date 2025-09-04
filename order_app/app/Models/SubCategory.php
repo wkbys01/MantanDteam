@@ -20,10 +20,10 @@ class SubCategory extends Model
     ];
 
     public function mainCategory(){
-        return $this->belongsTo(MainCategory::class , 'main_category_id');
+        return $this->belongsTo(MainCategory::class);
     }
 
     public function menus(){
-        return $this->hasMany(Menu::class , 'sub_category_id');
+        return $this->hasMany(Menu::class);
     }
 }

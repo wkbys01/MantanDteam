@@ -26,7 +26,7 @@ class MainCategoriesSeeder extends Seeder
 
         MainCategory::create([
             'translations' => [
-                'ja' => ["オススメ" , "期間限定メニュー"],   // 2行
+                'ja' => ["オススメ" , "期間限定"],   // 2行
                 'en' => ["Recommended" , "Limited time menu"],
                 'zh' => ["推薦" , "期間限定菜單"],
             ],
@@ -34,7 +34,7 @@ class MainCategoriesSeeder extends Seeder
 
         MainCategory::create([
             'translations' => [
-                'ja' => "グランドメニュー",   // 1行（文字列）
+                'ja' => "グランド",   // 1行（文字列）
                 'en' => "Grand menu",
                 'zh' => "主菜單",
             ],
@@ -58,7 +58,7 @@ class MainCategoriesSeeder extends Seeder
 
         MainCategory::create([
             'translations' => [
-                'ja' => ["お子さまメニュー" , "単品"],   // 2行
+                'ja' => ["お子さま" , "単品"],   // 2行
                 'en' => ["Child menu" , "Single item"],
                 'zh' => ["兒童菜單" , "單品"],
             ],
@@ -66,9 +66,9 @@ class MainCategoriesSeeder extends Seeder
 
         MainCategory::create([
             'translations' => [
-                'ja' => ["お持ち", "帰り"],   // 2行
-                'en' => ["Take", "out"],
-                'zh' => ["外帶" , ""],
+                'ja' => "お持ち帰り",   // 2行
+                'en' => "Take out",
+                'zh' => "外帶",
             ],
         ]);
 

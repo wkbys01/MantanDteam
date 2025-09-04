@@ -64,10 +64,10 @@
             @elseif($index === 5)
                 <div class="take_out_btn link_btn">
                     <a href="{{ route('menu_test', $category->id) }}">
-                        <div class="btn_txt">
-                            <div class="spacer">{{ $texts[0] }}</div>
-                            <div>{{ $texts[1] }}</div>
-                        </div>
+                      <div class="btn_txt">
+                          <div class="spacer">{{ mb_substr($texts, 0, app()->getLocale() === 'ja' ? 3 : 4) }}</div>
+                          <div>{{ mb_substr($texts, app()->getLocale() === 'ja' ? 3 : 4) }}</div>
+                      </div>
                     </a>
                 </div>
             @elseif($index === 6)
