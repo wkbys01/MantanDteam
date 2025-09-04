@@ -84,9 +84,11 @@
     width: 40px;
 }
 .langage_txt {
-    color: #666666;
+    color: var(--secondary-font-color);
 }
-.ja_txt {
+
+/* 言語選択時のスタイル */
+.active {
     color: var(--main-font-color);
     font-weight: var(--font-bold);
 }

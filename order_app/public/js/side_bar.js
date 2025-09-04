@@ -1,5 +1,23 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // ====== 要素の定義 ======
+    /*==========================
+        要素の定義
+    ===========================*/
+
+    // サイドバーのボタンを取得
+    const jaBtn = document.getElementById("jaBtn");
+    const cnBtn = document.getElementById("cnBtn");
+    const enBtn = document.getElementById("enBtn");
+
+    const listBtn = document.getElementById("listBtn");
+    const orderBtn = document.getElementById("orderBtn");
+    const historyBtn = document.getElementById("historyBtn");
+    const callBtn = document.getElementById("callBtn");
+    const checkoutBtn = document.getElementById("checkoutBtn");
+
+    // 言語設定のテキスト取得
+    const jaTxt = document.getElementById("jaTxt");
+    const cnTxt = document.getElementById("cnTxt");
+    const enTxt = document.getElementById("enTxt");
 
     // ダイアログの要素を取得
     const dialog = document.getElementById("dialog");
@@ -12,15 +30,92 @@ document.addEventListener("DOMContentLoaded", function() {
     const listDetails = document.getElementById("listDetails");
     const xBtn = document.getElementById("xBtn");
 
-    // サイドバーのボタンを取得
-    const listBtn = document.getElementById("listBtn");
-    const orderBtn = document.getElementById("orderBtn");
-    const historyBtn = document.getElementById("historyBtn");
-    const callBtn = document.getElementById("callBtn");
-    const checkoutBtn = document.getElementById("checkoutBtn");
+
+    /*==========================
+        関数の定義
+    ===========================*/
+    // // ページ読み込み時に保存された言語設定を復元
+    // function initializeLang() {
+    //     // localStorageから言語設定を取得（初期値は"ja"）
+    //     const savedLang = localStorage.getItem("selectedLang") || "ja";
+
+    //     // 保存されていた言語に応じてスタイルを設定
+    //     setLangStyle(savedLang);
+    // }
+
+    // // 言語のスタイルを設定する関数
+    // function setLangStyle(langCode) {
+    //     // 一旦すべてのactiveクラスを削除
+    //     jaTxt.classList.remove("active");
+    //     cnTxt.classList.remove("active");
+    //     enTxt.classList.remove("active");
+
+    //     // 選択された言語にactiveクラスを追加
+    //     switch (langCode) {
+    //         case "ja":
+    //             jaTxt.classList.add("active");
+    //             break;
+    //         case "cn":
+    //             cnTxt.classList.add("active");
+    //             break;
+    //         case "en":
+    //             enTxt.classList.add("active");
+    //             break;
+    //     }
+    // }
+
+    // // 言語選択処理
+    // function selectLang(buttonId) {
+    //     let selectedLang;
+
+    //     switch (buttonId) {
+    //         case "jaBtn":
+    //             selectedLang = "ja";
+    //             break;
+    //         case "cnBtn":
+    //             selectedLang = "cn";
+    //             break;
+    //         case "enBtn":
+    //             selectedLang = "en";
+    //             break;
+    //         default:
+    //             alert("言語選択に失敗");
+    //             return;
+    //     }
+
+    //     // localStorageに選択した言語を保存
+    //     localStorage.setItem("selectedLang", selectedLang);
+    //     // スタイルを更新
+    //     setLangStyle(selectedLang);
+    // }
 
 
-    // ====== 関数 ======
+    // 言語初期設定（日本語）
+    jaTxt.classList.add("active");
+
+    // 言語選択
+    function selectLang() {
+        switch (currentId) {
+            case "jaBtn":
+                jaTxt.classList.add("active");
+                cnTxt.classList.remove("active");
+                enTxt.classList.remove("active");
+                break;
+            case "cnBtn":
+                cnTxt.classList.add("active");
+                jaTxt.classList.remove("active");
+                enTxt.classList.remove("active");
+                break;
+            case "enBtn":
+                enTxt.classList.add("active");
+                jaTxt.classList.remove("active");
+                cnTxt.classList.remove("active");
+                break;
+            default:
+                alert("言語選択に失敗");
+                break;
+        }
+    }
 
     // ダイアログを表示
     function showDialog(message, notice = "") {
@@ -34,16 +129,16 @@ document.addEventListener("DOMContentLoaded", function() {
         dialog.style.display = "none";
     }
 
-    // 注文リスト表示
+    // 注文リストを表示
     function showlistDetails() {
         listDetails.style.display = "block";
     }
-    // 注文リスト非表示
+    // 注文リストを非表示
     function hidelistDetails() {
         listDetails.style.display = "none";
     }
 
-    // ページ遷移
+    // はいボタンからのページ遷移
     function pageTransition() {
         switch (currentId) {
             case "orderBtn":
@@ -62,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
+    // let langState = false;
     let currentId = "";
     let currentAction = "";
 
@@ -70,6 +166,11 @@ document.addEventListener("DOMContentLoaded", function() {
         currentId = event.currentTarget.id
 
         switch (currentId) {
+            case "jaBtn":
+            case "cnBtn":
+            case "enBtn":
+                selectLang(currentId);
+                break;
             case "listBtn":
                 showlistDetails();
                 break;
@@ -97,7 +198,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    // ====== イベントリスナー ======
+    /*==========================
+        イベントリスナー
+    ===========================*/
+    jaBtn.addEventListener("click", handleButtonClick);
+    cnBtn.addEventListener("click", handleButtonClick);
+    enBtn.addEventListener("click", handleButtonClick);
+
     listBtn.addEventListener("click", handleButtonClick);
     orderBtn.addEventListener("click", handleButtonClick);
     historyBtn.addEventListener("click", handleButtonClick);
@@ -123,4 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 注文リストの×ボタン
     xBtn.addEventListener("click", hidelistDetails);
+
+    // 言語設定を初期化（保存された設定または日本語）
+    initializeLang();
 });
