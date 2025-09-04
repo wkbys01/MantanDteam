@@ -19,28 +19,12 @@ class MenuPageController extends Controller
         return view('menus.menu', compact('menus'));
     }
 
-    // public function index(MainCategory $mainCategory)
-    // {
-    //     $mainCategory->load('sub_categories');
-    //     return view('menus.menu', [
-    //         'mainCategory' => $mainCategory,
-    //         'subCategories' => $mainCategory->sub_categories,
-    //         'menus' => collect(), // 空にしておく
-    //         'selectedSubCategory' => null,
-    //     ]);
-    // }
+    public function menu_test(){
+        // $subCategory = SubCategory::with('menus')
+        //     ->findOrFail($subCategoryId);
 
-    // // サブカテゴリを選んだとき（メニュー表示）
-    // public function show(MainCategory $mainCategory, SubCategory $subCategory)
-    // {
-    //     $subCategory->load('menus');
-    //     $menus = $subCategory->menus()->paginate(8);
+        $menus = Menu::paginate(8);
 
-    //     return view('menus.menu', [
-    //         'mainCategory' => $mainCategory,
-    //         'subCategories' => $mainCategory->sub_categories,
-    //         'menus' => $menus,
-    //         'selectedSubCategory' => $subCategory,
-    //     ]);
-    // }
+        return view('test.menu', compact('menus'));
+    }
 }

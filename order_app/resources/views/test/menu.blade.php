@@ -22,7 +22,7 @@
       <div class="top_bar_container flex_bar">
         <div class="top_btn link_btn flex_bar">
           <div class="top_icon"><img src="images/icon/home.svg" alt="#"></div>
-          <a href="{{ route('top_page') }}">Top</a>
+          <a href="{{ route('top_test') }}">Top</a>
         </div>
 
         <ul class="main_category_bar flex_bar">
@@ -73,16 +73,38 @@
       <div class="main_container">
         <ul class="sub_category_bar flex_bar">
           <!-- php、jsで対応した個数出力 -->
-          @foreach($mainCategory->sub_categories as $subCategory)
           <li class="sub_category" id="pressed_sub_category">
-            <button class="sub_category_btn">{{ $subCategory->translations['ja'] ?? '未設定' }}</button>
+            <button class="sub_category_btn">サブカテゴリ</button>
           </li>
-          @endforeach
+          <li class="sub_category">
+            <button class="sub_category_btn">サブカテゴリ</button>
+          </li>
+          <li class="sub_category">
+            <button class="sub_category_btn">サブカテゴリ</button>
+          </li>
+          <li class="sub_category">
+            <button class="sub_category_btn">サブカテゴリ</button>
+          </li>
+          <li class="sub_category">
+            <button class="sub_category_btn">サブカテゴリ</button>
+          </li>
+          <li class="sub_category">
+            <button class="sub_category_btn">サブカテゴリ</button>
+          </li>
+          <li class="sub_category">
+            <button class="sub_category_btn">サブカテゴリ</button>
+          </li>
+          <li class="sub_category">
+            <button class="sub_category_btn">サブカテゴリ</button>
+          </li>
+          <li class="sub_category">
+            <button class="sub_category_btn">サブカテゴリ</button>
+          </li>
         </ul>
 
         <div class="menu_container">
           <ul class="menu_list">
-            @forelse($menus as $menu)
+            @foreach($menus as $menu)
             <li class="menu_content">
               <button class="menu_content_btn">
                 <img src="images/menu_page/demi_hamburg.jpg" alt="">
@@ -92,11 +114,23 @@
                 </div>
               </button>
             </li>
-            @empty
-              <p>メニューがありません</p>
-            @endforelse
+            @endforeach
+            
+          </ul>
+        </div>
+      </div>
 
       <!-- <div class="movement_btn_container">
+        <button class="left_btn movement_btn"></button>
+        <div class="page_count">
+          <div class="numerator">1</div>
+          <div class="count_line">/</div>
+          <div class="denominator">3</div>
+        </div>
+        <button class="right_btn movement_btn"></button>
+      </div> -->
+
+      <div class="movement_btn_container">
           @if ($menus->onFirstPage())
               <button class="left_btn movement_btn" disabled></button>
           @else
@@ -118,7 +152,7 @@
           @else
               <button class="right_btn movement_btn" disabled></button>
           @endif
-      </div> -->
+      </div>
     </div>
 
   </main>

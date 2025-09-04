@@ -2,11 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class MainCategory extends Model
 {
     //
+    use HasFactory;
+
     protected $fillable = [
         'translations',
     ];
@@ -15,7 +18,7 @@ class MainCategory extends Model
         'translations' => 'array',
     ];
 
-    public function sub_Categories(){
-        return $this->hasMany(SubCategory::class);
+    public function subCategories(){
+        return $this->hasMany(SubCategory::class , 'main_category_id');
     }
 }

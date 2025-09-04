@@ -11,6 +11,7 @@ class Menu extends Model
         'sub_category_id',
         'price',
         'translations',
+        'image_path',
     ];
 
     protected $casts = [
