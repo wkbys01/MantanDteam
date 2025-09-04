@@ -13,12 +13,12 @@
 </head>
 <body>
 
-    <div class="list_details_container">
+    <div class="list_details_container" id="listDetails">
         <div class="list_details">
 
             <div class="header_container">
                 <h2>注文リスト</h2>
-                <button class="x_btn">×</button>
+                <button class="x_btn" id="xBtn">×</button>
             </div>
 
             <div class="table_container">
@@ -151,8 +151,8 @@
                     <p class="total_price">？？？？</p>
                 </div>
                 <button class="confirm_btn">注文確定</button>
-                        </div>
             </div>
+        </div>
     </div>
 
 </body>

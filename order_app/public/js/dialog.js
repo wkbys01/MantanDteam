@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const yesBtn = document.getElementById("yesBtn");
     const cancelBtn = document.getElementById("cancelBtn");
 
+    // 注文リストの要素を取得
+    const listDetails = document.getElementById("listDetails");
+    const xBtn = document.getElementById("xBtn");
+
     // サイドバーのボタンを取得
     const listBtn = document.getElementById("listBtn");
     const orderBtn = document.getElementById("orderBtn");
@@ -28,6 +32,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // ダイアログを非表示
     function hideDialog() {
         dialog.style.display = "none";
+    }
+
+    // 注文リスト表示
+    function showlistDetails() {
+        listDetails.style.display = "block";
+    }
+    // 注文リスト非表示
+    function hidelistDetails() {
+        listDetails.style.display = "none";
     }
 
     // ページ遷移
@@ -58,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         switch (currentId) {
             case "listBtn":
-                showDialog("注文リストを表示します", "これはテストです");
+                showlistDetails();
                 break;
             case "orderBtn":
                 showDialog("注文を確定しますか？");
@@ -107,4 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
         };
     });
+
+    // 注文リストの×ボタン
+    xBtn.addEventListener("click", hidelistDetails);
 });

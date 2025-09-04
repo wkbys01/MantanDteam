@@ -1,6 +1,6 @@
 /* 注文リストのスタイル */
 .list_details_container {
-    /* display: none; */
+    display: none;
     z-index: 9;
     background: rgba(0, 0, 0, 0.25);
     position: fixed;
@@ -146,16 +146,10 @@ th {
 }
 
 .total_price_box {
-    /* position: absolute;
-    bottom: 30px;
-    left: 20px; */
     display: flex;
     font-size: 35px;
 }
 .confirm_btn {
-    /* position: absolute;
-    bottom: 25px;
-    right: 20px; */
     background-color: var(--secondary-bg-red);
     width: 156px;
     height: 45px;
