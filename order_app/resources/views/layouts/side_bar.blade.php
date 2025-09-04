@@ -94,6 +94,6 @@
 
     @include('layouts.dialog')
     @include('layouts.list_details')
-    <script src="{{ asset('js/dialog.js') }}"></script>
+    <script src="{{ asset('js/side_bar.js') }}"></script>
 </body>
 </html>
