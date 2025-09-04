@@ -41,3 +41,7 @@ Route::get('/history_page', function () {
 Route::get('/pop_up', function () {
     return view('layouts.dialog');
 });
+
+Route::get('/list_details', function () {
+    return view('layouts.list_details');
+});
