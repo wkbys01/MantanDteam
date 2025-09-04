@@ -78,9 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 currentAction = "pageTransition";
                 break;
             case "historyBtn":
-                alert("注文履歴ボタン：テストページへ遷移");
-                location.href = "/top_page"   // 仮ページへ遷移
-                // currentAction = "pageTransition";
+                location.href = "/history_page"
                 break;
             case "callBtn":
                 showDialog("店員を呼び出しますか？");
