@@ -15,20 +15,19 @@
 
     <header class="side_bar_container">
 
-        <!-- jsで選択時のスタイルを実装予定 -->
         <div class="language_container">
             <div class="language_box">
-                <button class="japan_box icon_flex_btn">
+                <button class="japan_box icon_flex_btn" id="jaBtn">
                     <img src="images/icon/flag_japan.svg" alt="日本国旗">
-                    <p class="ja_txt langage_txt">日本語</p>
+                    <p class="ja_txt langage_txt" id="jaTxt">日本語</p>
                 </button>
-                <button class="china_box icon_flex_btn">
+                <button class="china_box icon_flex_btn" id="cnBtn">
                     <img src="images/icon/flag_china.svg" alt="中国国旗">
-                    <p class="cn_txt langage_txt">中文</p>
+                    <p class="cn_txt langage_txt" id="cnTxt">中文</p>
                 </button>
-                <button class="japan_box icon_flex_btn">
+                <button class="japan_box icon_flex_btn" id="enBtn">
                     <img src="images/icon/flag.svg" alt="英語圏国旗">
-                    <p class="en_txt langage_txt">English</p>
+                    <p class="en_txt langage_txt" id="enTxt">English</p>
                 </button>
             </div>
         </div>
@@ -94,6 +93,6 @@
 
     @include('layouts.dialog')
     @include('layouts.list_details')
-    <script src="{{ asset('js/dialog.js') }}"></script>
+    <script src="{{ asset('js/side_bar.js') }}"></script>
 </body>
 </html>
