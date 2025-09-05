@@ -75,13 +75,13 @@
         </div>
       </div>
 
-      <div class="movement_btn_container">
+      <!-- <div class="movement_btn_container">
           @if ($menus->onFirstPage())
               <button class="left_btn movement_btn" disabled></button>
           @else
-              <a href="{{ $menus->previousPageUrl() }}">
-                  <button class="left_btn movement_btn"></button>
-              </a>
+            <button class="left_btn movement_btn">
+              <a href="{{ $menus->previousPageUrl() }}"></a>
+            </button>
           @endif
 
           <div class="page_count">
@@ -96,6 +96,29 @@
               </a>
           @else
               <button class="right_btn movement_btn" disabled></button>
+          @endif
+      </div> -->
+
+      <div class="movement_btn_container">
+          {{-- ← 前へ --}}
+          @if ($menus->onFirstPage())
+              <span class="left_btn movement_btn disabled"></span>
+          @else
+              <a href="{{ $menus->previousPageUrl() }}" class="left_btn movement_btn"></a>
+          @endif
+
+          {{-- ページ数 --}}
+          <div class="page_count">
+              <div class="numerator">{{ $menus->currentPage() }}</div>
+              <div class="count_line">/</div>
+              <div class="denominator">{{ $menus->lastPage() }}</div>
+          </div>
+
+          {{-- → 次へ --}}
+          @if ($menus->hasMorePages())
+              <a href="{{ $menus->nextPageUrl() }}" class="right_btn movement_btn"></a>
+          @else
+              <span class="right_btn movement_btn disabled"></span>
           @endif
       </div>
     </div>

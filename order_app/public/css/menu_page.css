@@ -214,3 +214,10 @@
   font-size: 35px;
   font-weight: var(--font-midium);
 }
+
+/* === ページがない時の処理 === */
+.movement_btn.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
