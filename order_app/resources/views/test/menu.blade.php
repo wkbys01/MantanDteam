@@ -24,6 +24,7 @@
           <div class="top_icon"><img src="{{ asset('images/icon/home.svg') }}" alt="#"></div>
           <a href="{{ route('top_test') }}">Top</a>
         </div>
+
         <ul class="main_category_bar flex_bar">
           @foreach($allMainCategories as $mc)
             <li class="main_category {{ $mainCategory->id === $mc->id ? 'active' : '' }}">
@@ -40,6 +41,7 @@
             </li>
           @endforeach
         </ul>
+
       </div>
 
       <div class="main_container">
