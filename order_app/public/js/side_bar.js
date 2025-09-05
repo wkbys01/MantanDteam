@@ -34,88 +34,77 @@ document.addEventListener("DOMContentLoaded", function() {
     /*==========================
         関数の定義
     ===========================*/
-    // // ページ読み込み時に保存された言語設定を復元
-    // function initializeLang() {
-    //     // localStorageから言語設定を取得（初期値は"ja"）
-    //     const savedLang = localStorage.getItem("selectedLang") || "ja";
 
-    //     // 保存されていた言語に応じてスタイルを設定
-    //     setLangStyle(savedLang);
-    // }
+    // ページ読み込み時に保存された言語設定を復元
+    function initializeLang() {
+        // localStorageから言語設定を取得（初期値は"ja"）
+        const savedLang = localStorage.getItem("selectedLang") || "ja";
 
-    // // 言語のスタイルを設定する関数
-    // function setLangStyle(langCode) {
-    //     // 一旦すべてのactiveクラスを削除
-    //     jaTxt.classList.remove("active");
-    //     cnTxt.classList.remove("active");
-    //     enTxt.classList.remove("active");
+        // 保存されていた言語に応じてスタイルを設定
+        setLangStyle(savedLang);
+    }
 
-    //     // 選択された言語にactiveクラスを追加
-    //     switch (langCode) {
-    //         case "ja":
-    //             jaTxt.classList.add("active");
-    //             break;
-    //         case "cn":
-    //             cnTxt.classList.add("active");
-    //             break;
-    //         case "en":
-    //             enTxt.classList.add("active");
-    //             break;
-    //     }
-    // }
+    // 言語のスタイルを設定する関数
+    function setLangStyle(langCode) {
+        // 一旦すべてのactiveクラスを削除
+        jaTxt.classList.remove("active");
+        cnTxt.classList.remove("active");
+        enTxt.classList.remove("active");
 
-    // // 言語選択処理
-    // function selectLang(buttonId) {
-    //     let selectedLang;
-
-    //     switch (buttonId) {
-    //         case "jaBtn":
-    //             selectedLang = "ja";
-    //             break;
-    //         case "cnBtn":
-    //             selectedLang = "cn";
-    //             break;
-    //         case "enBtn":
-    //             selectedLang = "en";
-    //             break;
-    //         default:
-    //             alert("言語選択に失敗");
-    //             return;
-    //     }
-
-    //     // localStorageに選択した言語を保存
-    //     localStorage.setItem("selectedLang", selectedLang);
-    //     // スタイルを更新
-    //     setLangStyle(selectedLang);
-    // }
-
-
-    // 言語初期設定（日本語）
-    jaTxt.classList.add("active");
-
-    // 言語選択
-    function selectLang() {
-        switch (currentId) {
-            case "jaBtn":
+        // 選択された言語にactiveクラスを追加
+        switch (langCode) {
+            case "ja":
                 jaTxt.classList.add("active");
-                cnTxt.classList.remove("active");
-                enTxt.classList.remove("active");
                 break;
-            case "cnBtn":
+            case "cn":
                 cnTxt.classList.add("active");
-                jaTxt.classList.remove("active");
-                enTxt.classList.remove("active");
                 break;
-            case "enBtn":
+            case "en":
                 enTxt.classList.add("active");
-                jaTxt.classList.remove("active");
-                cnTxt.classList.remove("active");
                 break;
             default:
-                alert("言語選択に失敗");
+                alert("スタイルの変更に失敗");
                 break;
         }
     }
+
+    // 言語選択処理
+    function selectLang(buttonId) {
+        let selectedLang;
+
+        switch (buttonId) {
+            case "jaBtn":
+                selectedLang = "ja";
+                break;
+            case "cnBtn":
+                selectedLang = "cn";
+                break;
+            case "enBtn":
+                selectedLang = "en";
+                break;
+            default:
+                alert("言語選択に失敗");
+                return;
+        }
+
+        // localStorageに選択した言語を保存
+        localStorage.setItem("selectedLang", selectedLang);
+        // スタイルを更新
+        setLangStyle(selectedLang);
+    }
+
+    // ----------------------
+
+    // 注文リストを表示
+    function showlistDetails() {
+        listDetails.style.display = "block";
+    }
+    // 注文リストを非表示
+    function hidelistDetails() {
+        listDetails.style.display = "none";
+    }
+
+    // ----------------------
 
     // ダイアログを表示
     function showDialog(message, notice = "") {
@@ -128,36 +117,26 @@ document.addEventListener("DOMContentLoaded", function() {
     function hideDialog() {
         dialog.style.display = "none";
     }
-
-    // 注文リストを表示
-    function showlistDetails() {
-        listDetails.style.display = "block";
-    }
-    // 注文リストを非表示
-    function hidelistDetails() {
-        listDetails.style.display = "none";
-    }
-
     // はいボタンからのページ遷移
     function pageTransition() {
         switch (currentId) {
             case "orderBtn":
-                location.href = "/order_page"
+                location.href = "/order_page";
                 break;
             case "callBtn":
-                location.href = "/call_page"
+                location.href = "/call_page";
                 break;
             case "checkoutBtn":
-                location.href = "/checkout_page"
+                location.href = "/checkout_page";
                 break;
             default:
-                alert("ページ遷移できませんでした")
+                alert("ページ遷移できませんでした");
                 break;
         }
     }
 
+    // ----------------------
 
-    // let langState = false;
     let currentId = "";
     let currentAction = "";
 
@@ -179,9 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 currentAction = "pageTransition";
                 break;
             case "historyBtn":
-                alert("注文履歴ボタン：テストページへ遷移");
-                location.href = "/top_page"   // 仮ページへ遷移
-                // currentAction = "pageTransition";
+                location.href = "/history_page";
                 break;
             case "callBtn":
                 showDialog("店員を呼び出しますか？");
@@ -219,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
         switch (currentAction) {
             case "pageTransition":
                 // alert("ページを移行します");
-                pageTransition()
+                pageTransition();
                 break;
             default:
                 alert("エラー");
