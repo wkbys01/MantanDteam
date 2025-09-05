@@ -3,10 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
         要素の定義
     ===========================*/
 
-    // サイドバーのボタンを取得
+    // サイドバーの要素を取得
     const jaBtn = document.getElementById("jaBtn");
     const cnBtn = document.getElementById("cnBtn");
     const enBtn = document.getElementById("enBtn");
+
+    const jaTxt = document.getElementById("jaTxt");
+    const cnTxt = document.getElementById("cnTxt");
+    const enTxt = document.getElementById("enTxt");
 
     const listBtn = document.getElementById("listBtn");
     const orderBtn = document.getElementById("orderBtn");
@@ -14,10 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const callBtn = document.getElementById("callBtn");
     const checkoutBtn = document.getElementById("checkoutBtn");
 
-    // 言語設定のテキスト取得
-    const jaTxt = document.getElementById("jaTxt");
-    const cnTxt = document.getElementById("cnTxt");
-    const enTxt = document.getElementById("enTxt");
 
     // ダイアログの要素を取得
     const dialog = document.getElementById("dialog");
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const noticeTxt = document.getElementById("noticeTxt");
     const yesBtn = document.getElementById("yesBtn");
     const cancelBtn = document.getElementById("cancelBtn");
+
 
     // 注文リストの要素を取得
     const listDetails = document.getElementById("listDetails");
@@ -44,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // 保存されていた言語に応じてスタイルを設定
         setLangStyle(savedLang);
     }
+    // 言語設定を初期化（保存された設定または日本語）
+    initializeLang();
 
     // 言語のスタイルを設定する関数
     function setLangStyle(langCode) {
@@ -193,7 +196,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ダイアログのキャンセルボタン
     cancelBtn.addEventListener("click", hideDialog);
-
     // ダイアログのはいボタン
     yesBtn.addEventListener("click", () => {
         switch (currentAction) {
@@ -213,6 +215,4 @@ document.addEventListener("DOMContentLoaded", function() {
     // 注文リストの確定ボタン
     confirmBtn.addEventListener("click", handleButtonClick);
 
-    // 言語設定を初期化（保存された設定または日本語）
-    initializeLang();
 });
