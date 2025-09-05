@@ -150,7 +150,7 @@
                     <p>合計金額：</p>
                     <p class="total_price">？？？？</p>
                 </div>
-                <button class="confirm_btn">注文確定</button>
+                <button class="confirm_btn" id="confirmBtn">注文確定</button>
             </div>
         </div>
     </div>

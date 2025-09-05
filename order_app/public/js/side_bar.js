@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 注文リストの要素を取得
     const listDetails = document.getElementById("listDetails");
     const xBtn = document.getElementById("xBtn");
+    const confirmBtn = document.getElementById("confirmBtn");
 
 
     /*==========================
@@ -121,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function pageTransition() {
         switch (currentId) {
             case "orderBtn":
+            case "confirmBtn":
                 location.href = "/order_page";
                 break;
             case "callBtn":
@@ -154,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 showlistDetails();
                 break;
             case "orderBtn":
+            case "confirmBtn":
                 showDialog("注文を確定しますか？");
                 currentAction = "pageTransition";
                 break;
@@ -207,6 +210,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 注文リストの×ボタン
     xBtn.addEventListener("click", hidelistDetails);
+    // 注文リストの確定ボタン
+    confirmBtn.addEventListener("click", handleButtonClick);
 
     // 言語設定を初期化（保存された設定または日本語）
     initializeLang();
