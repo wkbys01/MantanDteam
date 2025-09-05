@@ -23,7 +23,7 @@ class MenuPageController extends Controller
     $allMainCategories = MainCategory::all();
     $mainCategory = MainCategory::with('subCategories.menus')->findOrFail($mainCategoryId);
     $subCategory = $mainCategory->subCategories->first();
-    $menus = $subCategory ? $subCategory->menus()->paginate(8) : collect();
+    $menus = $subCategory->menus()->paginate(8);
 
     return view('test.menu', compact('allMainCategories', 'mainCategory', 'subCategory', 'menus'));
 }

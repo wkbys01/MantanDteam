@@ -89,12 +89,12 @@
 
 
 /* メインカテゴリを押された時のデザイン(仮) */
-#pressed_main_category {
+.main_category.active {
   background-color: var(--secondary-bg-orange);
   color: var(--secondary-font-white);
   box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.2);
 }
-#pressed_main_category .two_categories_btn::after {
+.main_category .two_categories_btn.active::after {
   border-right: 1px solid var(--secondary-font-white);
 }
 
@@ -135,7 +135,7 @@
   border-right: none;
 }
 /* サブカテゴリを押された時のデザイン(仮) */
-#pressed_sub_category {
+.sub_category.active {
   background-color: var(--secondary-bg-soft-orange);
   box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.2);
 }
@@ -143,12 +143,11 @@
 /* メニュー一覧 */
 .menu_list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
   gap: 14px 10px;
   height: 522px;
-  padding: 34px 20px;
+  padding: 34px 25px;
 }
 .menu_content {
   width: 220px;

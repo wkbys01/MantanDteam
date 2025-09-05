@@ -28,7 +28,7 @@
           @foreach($allMainCategories as $mc)
             <li class="main_category {{ $mainCategory->id === $mc->id ? 'active' : '' }}">
               <a href="{{ route('menu_test', ['mainCategoryId' => $mc->id]) }}">
-                <button class="main_category_btn {{ is_array($mc->translations['ja']) ? 'two_categories_btn' : 'one_category_btn' }}">
+                <button class="main_category_btn {{ is_array($mc->translations['ja']) ? 'two_categories_btn' : 'one_category_btn' }} {{ $mainCategory->id === $mc->id ? 'active' : '' }}">
                   @if(is_array($mc->translations['ja']))
                     <div class="main_category_txt first_txt">{{ $mc->translations['ja'][0] }}</div>
                     <div class="main_category_txt second_txt">{{ $mc->translations['ja'][1] }}</div>
