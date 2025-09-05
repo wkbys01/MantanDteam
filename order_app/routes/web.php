@@ -45,3 +45,7 @@ Route::get('/pop_up', function () {
 Route::get('/list_details', function () {
     return view('layouts.list_details');
 });
+
+Route::get('/menu_details', function () {
+    return view('layouts.menu_details');
+});
