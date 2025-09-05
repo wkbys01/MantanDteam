@@ -13,8 +13,8 @@
 </head>
 <body>
 
-    <div class="list_details_container" id="listDetails">
-        <div class="list_details">
+    <div class="popup_container" id="listDetails">
+        <div class="popup_contents">
 
             <div class="header_container">
                 <h2>注文リスト</h2>

@@ -48,3 +48,28 @@ img {
   width: 100%;
   height: auto;
 }
+
+
+/* ポップアップの共通設定 */
+.popup_container {
+    display: none;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.popup_contents {
+    background-color: var(--main-bg-color);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 600px;
+    padding: 20px 20px;
+    text-align: left;
+    border-radius: 20px;
+}
