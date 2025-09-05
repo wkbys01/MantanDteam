@@ -17,7 +17,7 @@
         <div class="popup_contents">
 
             <div class="header_container">
-                <h2>注文リスト</h2>
+                <h2 class="popup_title">注文リスト</h2>
                 <button class="x_btn" id="xBtn">×</button>
             </div>
 

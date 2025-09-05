@@ -16,6 +16,24 @@
     <div class="popup_container" id="menuDetails">
         <div class="popup_contents">
 
+            <div class="header_container">
+                <h2 class="popup_title">メニュー名</h2>
+                <button class="x_btn" id="xBtn">×</button>
+            </div>
+
+            <div class="footer_container">
+                <div class="total_price_box">
+                    <p>合計金額：</p>
+                    <p class="total_price">？？？？</p>
+                </div>
+                <div class="quantity_adjust_box">
+                    <button class="minus_btn"></button>
+                    <p class="quantity">1</p>
+                    <button class="plus_btn"></button>
+                </div>
+                <button class="add_btn" id="addBtn">追加</button>
+            </div>
+
         </div>
     </div>
 

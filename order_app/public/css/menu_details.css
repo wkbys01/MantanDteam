@@ -3,3 +3,8 @@
 .popup_container {
     display: block;
 }
+
+.add_btn {
+    background-color: var(--secondary-bg-orange);
+    width: 120px;
+}
