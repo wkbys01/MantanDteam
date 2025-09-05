@@ -113,6 +113,7 @@
 .sub_category_bar {
   width: 100%;
   height: 60px;
+  background-color: var(--secondary-bg-white);
 }
 .sub_category {
   background-color: var(--secondary-bg-white);
@@ -132,7 +133,7 @@
   font-weight: var(--font-bold);
 }
 .sub_category:last-child {
-  border-right: none;
+  border-right: 1px solid var(--main-line-color);
 }
 /* サブカテゴリを押された時のデザイン(仮) */
 .sub_category.active {
