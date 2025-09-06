@@ -115,7 +115,7 @@
               </button>
             </li>
             @endforeach
-            
+
           </ul>
         </div>
       </div>
@@ -156,6 +156,8 @@
     </div>
 
   </main>
+
+    @include('layouts.menu_details')
 
 </body>
 </html>

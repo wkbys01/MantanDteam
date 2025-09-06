@@ -9,7 +9,7 @@
     border-bottom: 1px solid var(--main-font-color);
 }
 
-.main_container {
+.center_container {
     display: flex;
     justify-content: space-between;
     width: 960px;
@@ -70,7 +70,7 @@
     border-radius: 10px;
 }
 /* 選択時のスタイル */
-.active {
+.active_option {
     background-color: var(--secondary-bg-yellow);
 }
 .option_price {
