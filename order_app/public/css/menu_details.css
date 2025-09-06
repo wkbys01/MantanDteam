@@ -40,16 +40,44 @@
     background-color: var(--secondary-bg-white);
     width: 511px;
     padding: 5px 20px;
+    font-size: 20px;
+    overflow: scroll;
 }
 .option_content {
-    height: 100px;
+    min-height: 100px;
     padding: 10px 10px;
     border-bottom: 1px solid var(--main-line-color);
 }
+.option_content:last-child {
+    border-bottom: none;
+}
+/* .option_name {
+    padding-bottom: 20px;
+} */
 .option_btn_box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px 0 15px 50px;
+}
+.option_btn {
     background-color: var(--secondary-bg-gray);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 170px;
+    height: 35px;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+/* 選択時のスタイル */
+.active {
+    background-color: var(--secondary-bg-yellow);
+}
+.option_price {
+    padding-top: 10px;
+    font-size: 15px;
 }
 
 .btn_container {
