@@ -3,8 +3,64 @@
 .popup_container {
     display: block;
 }
+.popup_title {
+    min-width: 400px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--main-font-color);
+}
 
+.main_container {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    height: 428px;
+}
+.photo_container,
+.option_container {
+    /* background-color: #999; */
+    height: 100%;
+    border: 1px solid var(--main-line-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.photo_container {
+    width: 400px;
+}
+.allergy_contents {
+    background-color: var(--secondary-bg-white);
+    display: flex;
+    height: 90px;
+}
+.allergy_contents li {
+    /* width: ; */
+}
+
+.option_container {
+    background-color: var(--secondary-bg-white);
+    width: 511px;
+    padding: 5px 20px;
+}
+.option_content {
+    height: 100px;
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--main-line-color);
+}
+.option_btn_box {
+    background-color: var(--secondary-bg-gray);
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_container {
+    display: flex;
+    gap: 30px;
+}
+.quantity_adjust_box {
+    padding-left: 0;
+}
 .add_btn {
     background-color: var(--secondary-bg-orange);
     width: 120px;
+    color: var(--secondary-font-white);
 }
