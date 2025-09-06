@@ -1,6 +1,6 @@
 /* メニュー詳細ポップアップのスタイル */
 /* 表示テスト用 */
-.popup_container {
+#menuDetails {
     display: block;
 }
 .popup_title {
@@ -17,23 +17,24 @@
 }
 .photo_container,
 .option_container {
-    /* background-color: #999; */
     height: 100%;
     border: 1px solid var(--main-line-color);
     border-radius: 10px;
     overflow: hidden;
 }
-
 .photo_container {
     width: 400px;
+}
+.menu_photo {
+    object-fit: cover;
+    height: calc(100% - 90px);
 }
 .allergy_contents {
     background-color: var(--secondary-bg-white);
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 90px;
-}
-.allergy_contents li {
-    /* width: ; */
 }
 
 .option_container {
@@ -51,9 +52,6 @@
 .option_content:last-child {
     border-bottom: none;
 }
-/* .option_name {
-    padding-bottom: 20px;
-} */
 .option_btn_box {
     display: flex;
     justify-content: space-between;

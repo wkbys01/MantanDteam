@@ -24,25 +24,25 @@
             <div class="main_container">
                 <div class="photo_container">
                     {{-- 仮置き --}}
-                    <img src="images/top_page/top_recommend_limited.jpg" alt="メニューの写真">
+                    <img src="images/menu_page/meat_pasta.jpg" alt="メニューの写真" class="menu_photo">
                     <ul class="allergy_contents">
                         <li>
-                            <img src="{{ asset('images/icon/allergy_crab')}}" alt="かに">
+                            <img src="images/icon/allergy_crab.svg" alt="かに">
                         </li>
                         <li>
-                            <img src="images/icon/allergy_egg" alt="卵">
+                            <img src="images/icon/allergy_egg.svg" alt="卵">
                         </li>
                         <li>
-                            <img src="images/icon/allergy_milk" alt="乳">
+                            <img src="images/icon/allergy_milk.svg" alt="乳">
                         </li>
                         <li>
-                            <img src="images/icon/allergy_shrimp" alt="えび">
+                            <img src="images/icon/allergy_shrimp.svg" alt="えび">
                         </li>
                         <li>
-                            <img src="images/icon/allergy_soba" alt="そば">
+                            <img src="images/icon/allergy_soba.svg" alt="そば">
                         </li>
                         <li>
-                            <img src="images/icon/allergy_wheat" alt="小麦">
+                            <img src="images/icon/allergy_wheat.svg" alt="小麦">
                         </li>
                     </ul>
                 </div>
