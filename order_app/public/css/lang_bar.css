@@ -1,0 +1,69 @@
+/* サイドバーのスタイル */
+
+/* === 全体 === */
+.side_bar_container {
+    position: relative; /*　最前面に指定　*/
+    z-index: 3; /*　最前面に指定　*/
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    /* display: flex;
+    flex-direction: column;
+    gap: 10px; */
+    width: 238px;
+    height: 740px;
+    text-align: center;
+}
+
+main{
+    margin: 0;
+}
+
+/* === ボタン === */
+
+.icon_flex_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 5px 35px;
+}
+
+/* === 言語設定 === */
+.langage_container {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+.language_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 135px;
+    padding: 0 10px;
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+}
+.language_box .icon_flex_btn {
+    gap: 30px;
+    justify-content: left;
+}
+.language_box button {
+    height: 40px;
+    border-bottom: 1px solid var(--main-font-color);
+}
+.language_box img {
+    width: 40px;
+}
+.langage_txt {
+    color: var(--secondary-font-color);
+}
+
+/* 言語選択時のスタイル */
+.side_bar_container .active {
+    color: var(--main-font-color);
+    font-weight: var(--font-bold);
+}
