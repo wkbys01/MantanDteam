@@ -18,15 +18,15 @@
         <div class="language_container">
             <div class="language_box">
                 <button class="japan_box icon_flex_btn" id="jaBtn">
-                    <img src="images/icon/flag_japan.svg" alt="日本国旗">
+                    <img src="{{ asset('images/icon/flag_japan.svg') }}" alt="日本国旗">
                     <p class="ja_txt langage_txt" id="jaTxt">日本語</p>
                 </button>
                 <button class="china_box icon_flex_btn" id="cnBtn">
-                    <img src="images/icon/flag_china.svg" alt="中国国旗">
+                    <img src="{{ asset('images/icon/flag_china.svg') }}" alt="中国国旗">
                     <p class="cn_txt langage_txt" id="cnTxt">中文</p>
                 </button>
                 <button class="japan_box icon_flex_btn" id="enBtn">
-                    <img src="images/icon/flag.svg" alt="英語圏国旗">
+                    <img src="{{ asset('images/icon/flag.svg') }}" alt="英語圏国旗">
                     <p class="en_txt langage_txt" id="enTxt">English</p>
                 </button>
             </div>
@@ -37,7 +37,7 @@
             <div class="btn_list">
                 <div class="list_btn popup_btn h_50 round">
                     <button class="icon_flex_btn" id="listBtn">
-                        <img src="images/icon/icon_cart01.svg" alt="ショッピングカート" class="icon_img">
+                        <img src="{{ asset('images/icon/icon_cart01.svg') }}" alt="ショッピングカート" class="icon_img">
                         <p>注文リスト</p>
                     </button>
                 </div>
@@ -63,25 +63,25 @@
                 </div>
                 <div class="order_btn popup_btn h_65 round">
                     <button class="icon_flex_btn" id="orderBtn">
-                        <img src="images/icon/icon_cart01.svg" alt="ショッピングカート" class="icon_img">
+                        <img src="{{ asset('images/icon/icon_cart01.svg') }}" alt="ショッピングカート" class="icon_img">
                         <p>注文確定</p>
                     </button>
                 </div>
                 <div class="history_btn page_btn h_50 round">
                     <a href="#" class="icon_flex_btn" id="historyBtn">
-                        <img src="images/icon/icon_history.svg" alt="履歴" class="icon_img">
+                        <img src="{{ asset('images/icon/icon_history.svg') }}" alt="履歴" class="icon_img">
                         注文履歴
                     </a>
                 </div>
                 <div class="call_btn popup_btn h_50 round">
                     <button class="icon_flex_btn" id="callBtn">
-                        <img src="images/icon/icon_bell01.svg" alt="ベル" class="icon_img">
+                        <img src="{{ asset('images/icon/icon_bell01.svg') }}" alt="ベル" class="icon_img">
                         <p>呼び出し</p>
                     </button>
                 </div>
                 <div class="checkout_btn popup_btn h_65 round">
                     <button class="icon_flex_btn" id="checkoutBtn">
-                        <img src="images/icon/icon_checkout01.svg" alt="お金" class="icon_img">
+                        <img src="{{ asset('images/icon/icon_checkout01.svg') }}" alt="お金" class="icon_img">
                         <p>お会計</p>
                     </button>
                 </div>
