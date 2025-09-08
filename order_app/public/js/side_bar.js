@@ -132,6 +132,15 @@ document.addEventListener("DOMContentLoaded", function() {
         menuDetails.style.display = "none";
     }
 
+    // --- メニュー詳細 ---
+    // オプションボタンのスタイル追加
+
+    // 追加ボタンでメニューに戻る
+    function addMenu() {
+        alert("商品を注文リストに追加しました。");
+        hidePopup();
+    }
+
 
     // ===== ダイアログ =====
 
@@ -227,11 +236,18 @@ document.addEventListener("DOMContentLoaded", function() {
     listXBtn.addEventListener("click", hidePopup);
     menuXBtn.addEventListener("click", hidePopup);
 
-    // 注文リスト確定ボタン
+    // --- 注文リスト ---
+    // 確定ボタン
     confirmBtn.addEventListener("click", handleButtonClick);
 
+    // --- メニュー詳細 ---
     // 商品ボタン
     menuContentBtn.addEventListener("click", handleButtonClick);
+
+    // オプションボタン
+
+    // 追加ボタン
+    addBtn.addEventListener("click", addMenu);
 
 
     // ===== ダイアログ =====
