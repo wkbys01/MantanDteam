@@ -49,27 +49,27 @@
 
                 <div class="option_container">
                     <ul class="option_contens">
-                        <li class="option_content">
+                        <li class="option_content" data-option-type="single">
                             <h3 class="menu_option_name">グラム変更</h3>
                             <div class="option_btn_box">
-                                <button class="option_btn active_option">小<span class="option_price">+¥¥¥円</span></button>
+                                <button class="option_btn">小<span class="option_price">+¥¥¥円</span></button>
                                 <button class="option_btn">大<span class="option_price">+¥¥¥円</span></button>
                             </div>
                         </li>
-                        <li class="option_content">
+                        <li class="option_content" data-option-type="single">
                             <h3 class="menu_option_name">ドリンクバー</h3>
                             <div class="option_btn_box">
                                 <button class="option_btn">あり<span class="option_price">+¥¥¥円</span></button>
                             </div>
                         </li>
-                        <li class="option_content">
+                        <li class="option_content" data-option-type="single">
                             <h3 class="menu_option_name">サラダ追加</h3>
                             <div class="option_btn_box">
                                 <button class="option_btn">ミニ<span class="option_price">+¥¥¥円</span></button>
                                 <button class="option_btn">普通<span class="option_price">+¥¥¥円</span></button>
                             </div>
                         </li>
-                        <li class="option_content">
+                        <li class="option_content" data-option-type="multiple">
                             <h3 class="menu_option_name">トッピング</h3>
                             <div class="option_btn_box">
                                 <button class="option_btn">チーズ<span class="option_price">+¥¥¥円</span></button>
@@ -78,7 +78,7 @@
                                 <button class="option_btn">ポテト<span class="option_price">+¥¥¥円</span></button>
                             </div>
                         </li>
-                        <li class="option_content">
+                        <li class="option_content" data-option-type="single">
                             <h3 class="menu_option_name">ソース</h3>
                             <div class="option_btn_box">
                                 <button class="option_btn">デミグラス<span class="option_price">+¥¥¥円</span></button>

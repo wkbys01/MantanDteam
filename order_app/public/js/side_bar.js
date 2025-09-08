@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // メニュー詳細
     const menuDetails = document.getElementById("menuDetails");
+    const optionBtns = document.querySelectorAll('.option_btn');
     const addBtn = document.getElementById("addBtn");
 
     // メニューボタン
@@ -133,9 +134,45 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- メニュー詳細 ---
-    // オプションボタンのスタイル追加
+    // オプションボタン
+    function initializeOptionBtns() {
+        // すべてのオプション(種類)を取得
+        const optionContents = document.querySelectorAll(".option_content");
 
-    // 追加ボタンでメニューに戻る
+        // オプションの種類ごとに処理を分岐
+        optionContents.forEach(optionContent => {
+            // データ属性から選択タイプを取得
+            const optionType = optionContent.dataset.optionType;
+            // そのオプション内のボタンをすべて取得
+            const optionBtns = optionContent.querySelectorAll(".option_btn");
+
+            // 各ボタンのクリック時処理
+            optionBtns.forEach(btn => {
+                btn.addEventListener("click", function() {
+                    if (optionType === "multiple") {
+                        // 複数選択可能オプション
+                        this.classList.toggle("active_option");
+                    } else {
+                        // 単一選択オプション
+                        if (this.classList.contains("active_option")) {
+                            // 選択済み → 解除
+                            this.classList.remove("active_option");
+                        } else {
+                            // 未選択 → 他を解除して選択
+                            optionBtns.forEach(otherBtn => {
+                                otherBtn.classList.remove("active_option")
+                            });
+                            this.classList.add("active_option");
+                        }
+                    }
+                });
+            });
+        });
+    }
+    // オプションボタンを初期化
+    initializeOptionBtns();
+
+    // 追加ボタン
     function addMenu() {
         alert("商品を注文リストに追加しました。");
         hidePopup();
