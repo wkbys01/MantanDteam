@@ -2,10 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Main_categories;
-use App\Models\Menus;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,6 +16,10 @@ class DatabaseSeeder extends Seeder
             MainCategoriesSeeder::class,
             SubCategoriesSeeder::class,
             MenusSeeder::class,
+            MenuOptionsSeeder::class,
+            AllergensSeeder::class,
+            MenuAllergensSeeder::class,
+            OrderItemsSeeder::class,
         ]);
         
         

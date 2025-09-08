@@ -13,17 +13,6 @@ class MainCategoriesSeeder extends Seeder
      */
     public function run(): void
     {
-        // create型に変更
-        // DB::table('main_categories')->insert([
-        //     ['translations' => json_encode(["ja"=>["オススメ","期間限定"] , "en"=>["Recommended","Limited time menu"]])],
-        //     ['translations' => json_encode(["ja"=>"グランドメニュー" , "en"=>"Grand menu"])],
-        //     ['translations' => json_encode(["ja"=>"定食" , "en"=>"Set meal"])],
-        //     ['translations' => json_encode(["ja"=>"セットメニュー" , "en"=>"Set menu"])],
-        //     ['translations' => json_encode(["ja"=>["お子さまメニュー","単品"] , "en"=>["Child menu","Single item"]])],
-        //     ['translations' => json_encode(["ja"=>["お持ち","帰り"] , "en"=>["Take","out"]])],
-        //     ['translations' => json_encode(["ja"=>["ドリンク","デザート"] , "en"=>["Drink","Dessert"]])],
-        // ]);
-
         MainCategory::create([
             'translations' => [
                 'ja' => ["オススメ" , "期間限定"],   // 2行

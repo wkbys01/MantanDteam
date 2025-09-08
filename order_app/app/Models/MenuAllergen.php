@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Allergens extends Model
+class MenuAllergen extends Model
 {
     //
     protected $fillable = [
-        'image_path',
-        'translations',
+        'menu_id',
+        'allergen_id',
     ];
 }
