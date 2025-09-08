@@ -18,7 +18,7 @@
 
             <div class="header_container">
                 <h2 class="popup_title">メニュー名</h2>
-                <button class="x_btn" id="xBtn">×</button>
+                <button class="x_btn" id="menuXBtn">×</button>
             </div>
 
             <div class="center_container">

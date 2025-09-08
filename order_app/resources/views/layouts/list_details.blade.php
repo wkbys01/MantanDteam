@@ -18,7 +18,7 @@
 
             <div class="header_container">
                 <h2 class="popup_title">注文リスト</h2>
-                <button class="x_btn" id="xBtn">×</button>
+                <button class="x_btn" id="listXBtn">×</button>
             </div>
 
             <div class="table_container">
