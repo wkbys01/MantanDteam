@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
         要素の定義
     ===========================*/
 
-    // サイドバーの要素を取得
+    // ===== サイドバー =====
     const jaBtn = document.getElementById("jaBtn");
     const cnBtn = document.getElementById("cnBtn");
     const enBtn = document.getElementById("enBtn");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const checkoutBtn = document.getElementById("checkoutBtn");
 
 
-    // ダイアログの要素を取得
+    // ===== ダイアログ =====
     const dialog = document.getElementById("dialog");
     const dialogTxt = document.getElementById("dialogTxt");
     const noticeTxt = document.getElementById("noticeTxt");
@@ -27,15 +27,28 @@ document.addEventListener("DOMContentLoaded", function() {
     const cancelBtn = document.getElementById("cancelBtn");
 
 
-    // 注文リストの要素を取得
+    // ===== ポップアップ =====
+    const listXBtn = document.getElementById("listXBtn");
+    const menuXBtn = document.getElementById("menuXBtn");
+
+    // 注文リスト
     const listDetails = document.getElementById("listDetails");
-    const xBtn = document.getElementById("xBtn");
     const confirmBtn = document.getElementById("confirmBtn");
+
+    // メニュー詳細
+    const menuDetails = document.getElementById("menuDetails");
+    const optionBtns = document.querySelectorAll('.option_btn');
+    const addBtn = document.getElementById("addBtn");
+
+    // メニューボタン
+    const menuContentBtn = document.getElementById("menuContentBtn");
 
 
     /*==========================
         関数の定義
     ===========================*/
+
+    // ===== 言語設定 =====
 
     // ページ読み込み時に保存された言語設定を復元
     function initializeLang() {
@@ -97,30 +110,89 @@ document.addEventListener("DOMContentLoaded", function() {
         setLangStyle(selectedLang);
     }
 
-    // ----------------------
 
-    // 注文リストを表示
-    function showlistDetails() {
-        listDetails.style.display = "block";
+    // ===== ポップアップ =====
+
+    // 表示
+    function showPopup() {
+        switch (currentId) {
+            case "listBtn":
+                listDetails.style.display = "block";
+                break;
+            case "menuContentBtn":
+                menuDetails.style.display = "block";
+                break;
+            default:
+                alert("ポップアップの表示に失敗")
+                break;
+        }
     }
-    // 注文リストを非表示
-    function hidelistDetails() {
+    // 非表示
+    function hidePopup() {
         listDetails.style.display = "none";
+        menuDetails.style.display = "none";
     }
 
-    // ----------------------
+    // --- メニュー詳細 ---
+    // オプションボタン
+    function initializeOptionBtns() {
+        // すべてのオプション(種類)を取得
+        const optionContents = document.querySelectorAll(".option_content");
 
-    // ダイアログを表示
+        // オプションの種類ごとに処理を分岐
+        optionContents.forEach(optionContent => {
+            // データ属性から選択タイプを取得
+            const optionType = optionContent.dataset.optionType;
+            // そのオプション内のボタンをすべて取得
+            const optionBtns = optionContent.querySelectorAll(".option_btn");
+
+            // 各ボタンのクリック時処理
+            optionBtns.forEach(btn => {
+                btn.addEventListener("click", function() {
+                    if (optionType === "multiple") {
+                        // 複数選択可能オプション
+                        this.classList.toggle("active_option");
+                    } else {
+                        // 単一選択オプション
+                        if (this.classList.contains("active_option")) {
+                            // 選択済み → 解除
+                            this.classList.remove("active_option");
+                        } else {
+                            // 未選択 → 他を解除して選択
+                            optionBtns.forEach(otherBtn => {
+                                otherBtn.classList.remove("active_option")
+                            });
+                            this.classList.add("active_option");
+                        }
+                    }
+                });
+            });
+        });
+    }
+    // オプションボタンを初期化
+    initializeOptionBtns();
+
+    // 追加ボタン
+    function addMenu() {
+        alert("商品を注文リストに追加しました。");
+        hidePopup();
+    }
+
+
+    // ===== ダイアログ =====
+
+    // 表示
     function showDialog(message, notice = "") {
         dialogTxt.textContent = message;
         noticeTxt.textContent = notice;
 
         dialog.style.display = "block";
     }
-    // ダイアログを非表示
+    // 非表示
     function hideDialog() {
         dialog.style.display = "none";
     }
+
     // はいボタンからのページ遷移
     function pageTransition() {
         switch (currentId) {
@@ -140,14 +212,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // ----------------------
+
+    // ===== ボタンクリック時の処理 =====
 
     let currentId = "";
     let currentAction = "";
 
-    // ボタンクリック時の処理
     function handleButtonClick(event) {
-        currentId = event.currentTarget.id
+        currentId = event.currentTarget.id;
 
         switch (currentId) {
             case "jaBtn":
@@ -156,7 +228,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 selectLang(currentId);
                 break;
             case "listBtn":
-                showlistDetails();
+            case "menuContentBtn":
+                showPopup();
                 break;
             case "orderBtn":
             case "confirmBtn":
@@ -184,6 +257,7 @@ document.addEventListener("DOMContentLoaded", function() {
     /*==========================
         イベントリスナー
     ===========================*/
+    // ===== サイドバー =====
     jaBtn.addEventListener("click", handleButtonClick);
     cnBtn.addEventListener("click", handleButtonClick);
     enBtn.addEventListener("click", handleButtonClick);
@@ -194,9 +268,29 @@ document.addEventListener("DOMContentLoaded", function() {
     callBtn.addEventListener("click", handleButtonClick);
     checkoutBtn.addEventListener("click", handleButtonClick);
 
-    // ダイアログのキャンセルボタン
+    // ===== ポップアップ =====
+    // ×ボタン
+    listXBtn.addEventListener("click", hidePopup);
+    menuXBtn.addEventListener("click", hidePopup);
+
+    // --- 注文リスト ---
+    // 確定ボタン
+    confirmBtn.addEventListener("click", handleButtonClick);
+
+    // --- メニュー詳細 ---
+    // 商品ボタン
+    menuContentBtn.addEventListener("click", handleButtonClick);
+
+    // オプションボタン
+
+    // 追加ボタン
+    addBtn.addEventListener("click", addMenu);
+
+
+    // ===== ダイアログ =====
+    // キャンセルボタン
     cancelBtn.addEventListener("click", hideDialog);
-    // ダイアログのはいボタン
+    // はいボタン
     yesBtn.addEventListener("click", () => {
         switch (currentAction) {
             case "pageTransition":
@@ -209,10 +303,4 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
         };
     });
-
-    // 注文リストの×ボタン
-    xBtn.addEventListener("click", hidelistDetails);
-    // 注文リストの確定ボタン
-    confirmBtn.addEventListener("click", handleButtonClick);
-
 });

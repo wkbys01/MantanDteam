@@ -61,7 +61,7 @@
           <ul class="menu_list">
             @foreach($menus as $menu)
             <li class="menu_content">
-              <button class="menu_content_btn">
+              <button class="menu_content_btn" id="menuContentBtn">
                 <img src="{{ asset('images/menu_page/demi_hamburg.jpg') }}" alt="">
                 <div class="menu_txt">
                   <div class="menu_name">{{ $menu->translations['ja'] ?? '商品名' }}</div>
@@ -70,11 +70,11 @@
               </button>
             </li>
             @endforeach
-            
+
           </ul>
         </div>
       </div>
-      
+
       <div class="movement_btn_container">
           {{-- ← 前へ --}}
           @if ($menus->onFirstPage())
@@ -100,6 +100,8 @@
     </div>
 
   </main>
+
+    @include('layouts.menu_details')
 
 </body>
 </html>

@@ -13,12 +13,12 @@
 </head>
 <body>
 
-    <div class="list_details_container" id="listDetails">
-        <div class="list_details">
+    <div class="popup_container" id="listDetails">
+        <div class="popup_contents">
 
             <div class="header_container">
-                <h2>注文リスト</h2>
-                <button class="x_btn" id="xBtn">×</button>
+                <h2 class="popup_title">注文リスト</h2>
+                <button class="x_btn" id="listXBtn">×</button>
             </div>
 
             <div class="table_container">
