@@ -24,25 +24,25 @@
             <div class="center_container">
                 <div class="photo_container">
                     {{-- 仮置き --}}
-                    <img src="images/menu_page/meat_pasta.jpg" alt="メニューの写真" class="menu_photo">
+                    <img src="{{ asset('images/menu_page/meat_pasta.jpg') }}" alt="メニューの写真" class="menu_photo">
                     <ul class="allergy_contents">
                         <li>
-                            <img src="images/icon/allergy_crab.svg" alt="かに">
+                            <img src="{{ asset('images/icon/allergy_crab.svg') }}" alt="かに">
                         </li>
                         <li>
-                            <img src="images/icon/allergy_egg.svg" alt="卵">
+                            <img src="{{ asset('images/icon/allergy_egg.svg') }}" alt="卵">
                         </li>
                         <li>
-                            <img src="images/icon/allergy_milk.svg" alt="乳">
+                            <img src="{{ asset('images/icon/allergy_milk.svg') }}" alt="乳">
                         </li>
                         <li>
-                            <img src="images/icon/allergy_shrimp.svg" alt="えび">
+                            <img src="{{ asset('images/icon/allergy_shrimp.svg') }}" alt="えび">
                         </li>
                         <li>
-                            <img src="images/icon/allergy_soba.svg" alt="そば">
+                            <img src="{{ asset('images/icon/allergy_soba.svg') }}" alt="そば">
                         </li>
                         <li>
-                            <img src="images/icon/allergy_wheat.svg" alt="小麦">
+                            <img src="{{ asset('images/icon/allergy_wheat.svg') }}" alt="小麦">
                         </li>
                     </ul>
                 </div>
