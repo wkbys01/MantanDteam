@@ -61,7 +61,7 @@
           <ul class="menu_list">
             @foreach($menus as $menu)
             <li class="menu_content">
-              <button class="menu_content_btn" id="menuContentBtn">
+              <button class="menu_content_btn">
                 <img src="{{ asset($menu->image_path) }}" alt="">
                 <div class="menu_txt">
                   <div class="menu_name">{{ $menu->translations['ja'] ?? '商品名' }}</div>

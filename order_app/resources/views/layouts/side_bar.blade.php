@@ -68,7 +68,7 @@
                     </button>
                 </div>
                 <div class="history_btn page_btn h_50 round">
-                    <a href="#" class="icon_flex_btn" id="historyBtn">
+                    <a href="/history_page" class="icon_flex_btn" id="historyBtn">
                         <img src="{{ asset('images/icon/icon_history.svg') }}" alt="履歴" class="icon_img">
                         注文履歴
                     </a>

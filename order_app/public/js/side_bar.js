@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const listBtn = document.getElementById("listBtn");
     const orderBtn = document.getElementById("orderBtn");
-    const historyBtn = document.getElementById("historyBtn");
+    // const historyBtn = document.getElementById("historyBtn");
     const callBtn = document.getElementById("callBtn");
     const checkoutBtn = document.getElementById("checkoutBtn");
 
@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // メニュー詳細
     const menuDetails = document.getElementById("menuDetails");
-    const optionBtns = document.querySelectorAll('.option_btn');
+    // const optionBtns = document.querySelectorAll('.option_btn');
     const addBtn = document.getElementById("addBtn");
 
     // メニューボタン
-    const menuContentBtn = document.getElementById("menuContentBtn");
+    const menuContentBtns = document.querySelectorAll(".menu_content_btn");
 
 
     /*==========================
@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- メニュー詳細 ---
+
     // オプションボタン
     function initializeOptionBtns() {
         // すべてのオプション(種類)を取得
@@ -228,16 +229,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 selectLang(currentId);
                 break;
             case "listBtn":
-            case "menuContentBtn":
                 showPopup();
                 break;
             case "orderBtn":
             case "confirmBtn":
                 showDialog("注文を確定しますか？");
                 currentAction = "pageTransition";
-                break;
-            case "historyBtn":
-                location.href = "/history_page";
                 break;
             case "callBtn":
                 showDialog("店員を呼び出しますか？");
@@ -248,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 currentAction = "pageTransition";
                 break;
             default:
-                alert("その他のボタンが押されました");
+                console.log("その他のボタンが押されました");
                 break;
         }
     }
@@ -264,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     listBtn.addEventListener("click", handleButtonClick);
     orderBtn.addEventListener("click", handleButtonClick);
-    historyBtn.addEventListener("click", handleButtonClick);
+    // historyBtn.addEventListener("click", handleButtonClick);
     callBtn.addEventListener("click", handleButtonClick);
     checkoutBtn.addEventListener("click", handleButtonClick);
 
@@ -279,9 +276,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // --- メニュー詳細 ---
     // 商品ボタン
-    menuContentBtn.addEventListener("click", handleButtonClick);
-
-    // オプションボタン
+    menuContentBtns.forEach(btn => {
+        btn.addEventListener("click", function() {
+            currentId = "menuContentBtn";
+            showPopup();
+        });
+    });
 
     // 追加ボタン
     addBtn.addEventListener("click", addMenu);
@@ -294,7 +294,6 @@ document.addEventListener("DOMContentLoaded", function() {
     yesBtn.addEventListener("click", () => {
         switch (currentAction) {
             case "pageTransition":
-                // alert("ページを移行します");
                 pageTransition();
                 break;
             default:
