@@ -55,3 +55,7 @@ Route::get('/list_details', function () {
 Route::get('/menu_details', function () {
     return view('layouts.menu_details');
 });
+
+Route::get('test_page', function() {
+    return view('menus.test');
+});
