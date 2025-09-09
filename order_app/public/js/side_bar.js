@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const listBtn = document.getElementById("listBtn");
     const orderBtn = document.getElementById("orderBtn");
-    const historyBtn = document.getElementById("historyBtn");
+    // const historyBtn = document.getElementById("historyBtn");
     const callBtn = document.getElementById("callBtn");
     const checkoutBtn = document.getElementById("checkoutBtn");
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // メニュー詳細
     const menuDetails = document.getElementById("menuDetails");
-    const optionBtns = document.querySelectorAll('.option_btn');
+    // const optionBtns = document.querySelectorAll('.option_btn');
     const addBtn = document.getElementById("addBtn");
 
     // メニューボタン
@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- メニュー詳細 ---
+
     // オプションボタン
     function initializeOptionBtns() {
         // すべてのオプション(種類)を取得
@@ -236,9 +237,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 showDialog("注文を確定しますか？");
                 currentAction = "pageTransition";
                 break;
-            case "historyBtn":
-                location.href = "/history_page";
-                break;
+            // case "historyBtn":
+            //     location.href = "/history_page";
+            //     break;
             case "callBtn":
                 showDialog("店員を呼び出しますか？");
                 currentAction = "pageTransition";
@@ -248,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 currentAction = "pageTransition";
                 break;
             default:
-                alert("その他のボタンが押されました");
+                console.log("その他のボタンが押されました");
                 break;
         }
     }
@@ -264,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     listBtn.addEventListener("click", handleButtonClick);
     orderBtn.addEventListener("click", handleButtonClick);
-    historyBtn.addEventListener("click", handleButtonClick);
+    // historyBtn.addEventListener("click", handleButtonClick);
     callBtn.addEventListener("click", handleButtonClick);
     checkoutBtn.addEventListener("click", handleButtonClick);
 
@@ -294,7 +295,6 @@ document.addEventListener("DOMContentLoaded", function() {
     yesBtn.addEventListener("click", () => {
         switch (currentAction) {
             case "pageTransition":
-                // alert("ページを移行します");
                 pageTransition();
                 break;
             default:
