@@ -20,11 +20,12 @@
     <div class="top_page_container">
       @foreach($main_categories as $index => $category)
           @php
-              $texts = $category->translations['ja']; // 日本語だけ取り出す
+            $locale = app()->getLocale(); // 現在の言語
+            $texts = $category->translations[$locale] ?? $category->translations['ja']; 
           @endphp
 
             @if($index === 0)
-                <div class="recommend_btn link_btn areaA">
+                <div class="recommend_btn link_btn">
                     <a href="{{ route('menu_page', $category->id) }}">
                         <div class="btn_txt">
                           <div class="spacer">{{ $texts[0] }}</div>
@@ -33,25 +34,25 @@
                     </a>
                 </div>
             @elseif($index === 1)
-                <div class="grand_btn link_btn areaD">
+                <div class="grand_btn link_btn">
                   <a href="{{ route('menu_page', $category->id) }}">
                     <p class="btn_txt">{{ $texts }}</p>
                   </a>
                 </div>
             @elseif($index === 2)
-                <div class="set_meal_btn link_btn areaB">
+                <div class="set_meal_btn link_btn">
                   <a href="{{ route('menu_page', $category->id) }}">
                     <p class="btn_txt">{{ $texts }}</p>
                   </a>
                 </div>
             @elseif($index === 3)
-                <div class="set_btn link_btn areaC">
+                <div class="set_btn link_btn">
                   <a href="{{ route('menu_page', $category->id) }}">
                     <p class="btn_txt">{{ $texts }}</p>
                   </a>
                 </div>
             @elseif($index === 4)
-                <div class="child_single_btn link_btn areaE">
+                <div class="child_single_btn link_btn">
                     <a href="{{ route('menu_page', $category->id) }}">
                         <div class="btn_txt">
                             <div>{{ $texts[0] }}</div>
@@ -61,16 +62,16 @@
                     </a>
                 </div>
             @elseif($index === 5)
-                <div class="take_out_btn link_btn areaF">
+                <div class="take_out_btn link_btn">
                     <a href="{{ route('menu_page', $category->id) }}">
-                        <div class="btn_txt">
-                            <div class="spacer">{{ $texts[0] }}</div>
-                            <div>{{ $texts[1] }}</div>
-                        </div>
+                      <div class="btn_txt">
+                          <div class="spacer">{{ mb_substr($texts, 0, app()->getLocale() === 'ja' ? 3 : 4) }}</div>
+                          <div>{{ mb_substr($texts, app()->getLocale() === 'ja' ? 3 : 4) }}</div>
+                      </div>
                     </a>
                 </div>
             @elseif($index === 6)
-                <div class="drink_dessert_btn link_btn areaG">
+                <div class="drink_dessert_btn link_btn">
                     <a href="{{ route('menu_page', $category->id) }}">
                         <div class="btn_txt">
                             <div>{{ $texts[0] }}</div>

@@ -13,7 +13,7 @@
             <div class="main-content">
                 <div class="header_div">
                     <h1>注文履歴</h1>
-                    <a href="{{ route('menu_page') }}" class="header_button">メニューに戻る</a>
+                    <a href="{{ url()->previous() }}" class="header_button">メニューに戻る</a>
                 </div>
                 <main>
                     <table>

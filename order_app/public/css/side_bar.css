@@ -88,7 +88,7 @@
 }
 
 /* 言語選択時のスタイル */
-.active {
+.side_bar_container .active {
     color: var(--main-font-color);
     font-weight: var(--font-bold);
 }
