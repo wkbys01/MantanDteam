@@ -1,30 +1,132 @@
 @extends('layouts.app')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/start_page.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/history_page.css') }}">
 @endpush
 
 
 @section('content')
 
-@include('layouts.lang_bar')
-<main>
-    <div class="bg_color ">
-        <a href="{{ asset('top_page') }}" class="top_page_link_area"></a>
-
-        <div class="log_box">
-            <img src="{{ asset('images/logo/logo07.png') }}" alt="ロゴ">
+<div class="wapper">
+    <div class="main-content">
+        <div class="header_div">
+            <h1>注文履歴</h1>
+            <a href="{{ url()->previous() }}" class="header_button">メニューに戻る</a>
         </div>
-
-        <div class="text_area">
-            <p>ご来店ありがとうございます。</p>
-            <div class="start_text">
-                <p>-タップしてスタート-</p>
-            </div>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品名</th>
+                        <th>単価</th>
+                        <th>数量</th>
+                        <th>ご提供</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="main_td">お子様うどん</td>
+                        <td>600円</td>
+                        <td>2</td>
+                        <td>○</td>
+                    </tr>
+                    <tr>
+                        <td class="main_td_sab">:冷たい</td>
+                        <td>0円</td>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="main_td_sab">:ドリンクバー</td>
+                        <td>100円</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="main_td">きつねうどん</td>
+                        <td>700円</td>
+                        <td>1</td>
+                        <td>×</td>
+                    </tr>
+                    <tr>
+                        <td class="main_td_sab">:温かい</td>
+                        <td>0円</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="main_td">お子様うどん</td>
+                        <td>600円</td>
+                        <td>2</td>
+                        <td>○</td>
+                    </tr>
+                    <tr>
+                        <td class="main_td_sab">:冷たい</td>
+                        <td>0円</td>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="main_td_sab">:ドリンクバー</td>
+                        <td>100円</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="main_td">きつねうどん</td>
+                        <td>700円</td>
+                        <td>1</td>
+                        <td>×</td>
+                    </tr>
+                    <tr>
+                        <td class="main_td_sab">:温かい</td>
+                        <td>0円</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="main_td">お子様うどん</td>
+                        <td>600円</td>
+                        <td>2</td>
+                        <td>○</td>
+                    </tr>
+                    <tr>
+                        <td class="main_td_sab">:冷たい</td>
+                        <td>0円</td>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="main_td_sab">:ドリンクバー</td>
+                        <td>100円</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="main_td">きつねうどん</td>
+                        <td>700円</td>
+                        <td>1</td>
+                        <td>×</td>
+                    </tr>
+                    <tr>
+                        <td class="main_td_sab">:温かい</td>
+                        <td>0円</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <div class="footer_div">
+            <h2>合計金額</h2>
+            <p class="footer_p">:</p>
+            <p>6000円</p>
         </div>
     </div>
-</main>
-<script src="{{ asset('js/start_page.js') }}"></script>
+    <div>
+        @include('layouts.side_bar_sab')
+    </div>
+</div>
 
 
 @endsection
