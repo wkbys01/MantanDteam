@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     {{-- 各blade固有css --}}
-    {{-- <link rel="stylesheet" href="{{ asset('css/bladeごとのcss') }}"> --}}
+    @stack('styles')
 </head>
 <body>
 
