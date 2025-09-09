@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const addBtn = document.getElementById("addBtn");
 
     // メニューボタン
-    const menuContentBtn = document.getElementById("menuContentBtn");
+    const menuContentBtns = document.querySelectorAll(".menu_content_btn");
 
 
     /*==========================
@@ -229,7 +229,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 selectLang(currentId);
                 break;
             case "listBtn":
-            case "menuContentBtn":
                 showPopup();
                 break;
             case "orderBtn":
@@ -237,9 +236,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 showDialog("注文を確定しますか？");
                 currentAction = "pageTransition";
                 break;
-            // case "historyBtn":
-            //     location.href = "/history_page";
-            //     break;
             case "callBtn":
                 showDialog("店員を呼び出しますか？");
                 currentAction = "pageTransition";
@@ -280,9 +276,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // --- メニュー詳細 ---
     // 商品ボタン
-    menuContentBtn.addEventListener("click", handleButtonClick);
-
-    // オプションボタン
+    menuContentBtns.forEach(btn => {
+        btn.addEventListener("click", function() {
+            currentId = "menuContentBtn";
+            showPopup();
+        });
+    });
 
     // 追加ボタン
     addBtn.addEventListener("click", addMenu);
