@@ -1,21 +1,25 @@
 body {
     display: grid !important;
     grid-template-columns: 1fr 300px !important;
+    min-width: 1280px;
 }
 
 .wapper {
     width: 1280px !important;
     height: 800px !important;
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .main-content {
+    width: 960px !important;
     height: 740px !important;
-    margin: 30px !important;
+    margin: 30px!important;
     padding: 0 !important;
-    background-color: var(--secondary-bg-soft-orange) !important; /* #FFB35D */
+    background-color: var(--secondary-bg-soft-orange) !important;
     border-radius: 15px !important;
+    overflow: hidden;
 }
 
 .header_div {
@@ -70,19 +74,22 @@ main {
     position: sticky !important;
     top: 0 !important;
     z-index: 2 !important;
-    background-color: var(--secondary-bg-orange) !important; /* #F57C00 */
-    color: var(--secondary-font-white) !important; /* #ffffff */
+    background-color: var(--secondary-bg-orange) !important;
+    color: var(--secondary-font-white) !important;
 }
 
 .main-content table {
     width: 100% !important;
     font-size: 24px !important;
+    table-layout: fixed;
 }
 
 .main-content table th,
 .main-content table td {
-    border: solid 1px var(--main-line-color) !important; /* #BCAAA4 */
+    border: solid 1px var(--main-line-color) !important;
     vertical-align: middle !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .main-content table thead th {
@@ -99,15 +106,16 @@ main {
 }
 
 .main-content table tbody {
-    background-color: var(--secondary-bg-white) !important; /* #FFF9F9 */
+    background-color: var(--secondary-bg-white) !important;
 }
 
 .main-content table tbody td.main_td {
-    padding: 15px 366px 15px 10px !important;
+    padding: 15px 10px 15px 10px !important;
+    min-width: 200px;
 }
 
 .main-content table tbody td.main_td_sab {
-    padding: 15px 307px 15px 66px !important;
+    padding: 15px 10px 15px 30px !important;
     text-align: left !important;
 }
 
@@ -117,4 +125,8 @@ main {
 
 .main-content table tbody td {
     height: 50px !important;
+}
+
+.main-content table tbody tr:empty {
+    height: 50px;
 }

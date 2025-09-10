@@ -21,4 +21,8 @@ class Menu extends Model
     public function subCategory() {
         return $this->belongsTo(SubCategory::class);
     }
+
+    public function options() {
+        return $this->hasMany(MenuOptions::class);
+    }
 }

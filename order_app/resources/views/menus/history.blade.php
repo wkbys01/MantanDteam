@@ -26,103 +26,45 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="main_td">お子様うどん</td>
-                                <td>600円</td>
-                                <td>2</td>
-                                <td>○</td>
-                            </tr>
-                            <tr>
-                                <td class="main_td_sab">:冷たい</td>
-                                <td>0円</td>
-                                <td>2</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="main_td_sab">:ドリンクバー</td>
-                                <td>100円</td>
-                                <td>1</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="main_td">きつねうどん</td>
-                                <td>700円</td>
-                                <td>1</td>
-                                <td>×</td>
-                            </tr>
-                            <tr>
-                                <td class="main_td_sab">:温かい</td>
-                                <td>0円</td>
-                                <td>1</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="main_td">お子様うどん</td>
-                                <td>600円</td>
-                                <td>2</td>
-                                <td>○</td>
-                            </tr>
-                            <tr>
-                                <td class="main_td_sab">:冷たい</td>
-                                <td>0円</td>
-                                <td>2</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="main_td_sab">:ドリンクバー</td>
-                                <td>100円</td>
-                                <td>1</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="main_td">きつねうどん</td>
-                                <td>700円</td>
-                                <td>1</td>
-                                <td>×</td>
-                            </tr>
-                            <tr>
-                                <td class="main_td_sab">:温かい</td>
-                                <td>0円</td>
-                                <td>1</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="main_td">お子様うどん</td>
-                                <td>600円</td>
-                                <td>2</td>
-                                <td>○</td>
-                            </tr>
-                            <tr>
-                                <td class="main_td_sab">:冷たい</td>
-                                <td>0円</td>
-                                <td>2</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="main_td_sab">:ドリンクバー</td>
-                                <td>100円</td>
-                                <td>1</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="main_td">きつねうどん</td>
-                                <td>700円</td>
-                                <td>1</td>
-                                <td>×</td>
-                            </tr>
-                            <tr>
-                                <td class="main_td_sab">:温かい</td>
-                                <td>0円</td>
-                                <td>1</td>
-                                <td></td>
-                            </tr>
+                        @foreach($orders as $order)
+                            @foreach($order->items as $item)
+                                <tr>
+                                    <td class="main_td">{{ $item->menu->translations['ja'] ?? '商品名不明' }}</td>
+                                    <td>{{ $item->quantity }}</td>
+                                    <td>{{ $item->menu->price }}円</td>
+                                    <td>○</td>
+                                </tr>
+                                @if($item->menu->options)
+                                    @foreach($item->menu->options as $option)
+                                        @if(in_array($option->id, $item->options ?? []))
+                                            <tr>
+                                                <td class="main_td_sab">:{{ $option->translations['ja'] ?? 'オプション名不明' }}</td>
+                                                <td>{{ $item->quantity }}</td>
+                                                <td>{{ $option->price }}円</td>
+                                                <td></td>
+                                            </tr>
+                                        @endif
+                                    @endforeach
+                                @endif
+                            @endforeach
+                        @endforeach
                         </tbody>
                     </table>
                 </main>
                 <div class="footer_div">
                     <h2>合計金額</h2>
                     <p class="footer_p">:</p>
-                    <p>6000円</p>
+                    <p>
+                        @php
+                            $grandTotal = 0;
+                        @endphp
+
+                        @foreach($orders as $order)
+                            @php $grandTotal += $order->total_price; @endphp
+                        @endforeach
+
+                        {{ $grandTotal }}円
+                    </p>
                 </div>
             </div>
             <div>
