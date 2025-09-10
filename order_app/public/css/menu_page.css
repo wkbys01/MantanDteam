@@ -160,17 +160,27 @@
 .menu_content_btn {
   background-color: var(--secondary-bg-white);
 }
+
+.menu_img_box{
+  height: 156px;
+}
+
 .menu_txt {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
   gap: 6px;
   height: 64px;
 }
 .menu_name {
   font-size: 20px;
   font-weight: var(--font-bold);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 220px;
 }
 .price_txt {
   color: var(--secondary-font-color);

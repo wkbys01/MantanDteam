@@ -62,10 +62,12 @@
             @foreach($menus as $menu)
             <li class="menu_content">
               <button class="menu_content_btn">
-                <img src="{{ asset($menu->image_path) }}" alt="">
+                <div class="menu_img_box">
+                  <img src="{{ asset($menu->image_path) }}" alt="">
+                </div>
                 <div class="menu_txt">
-                  <div class="menu_name">{{ $menu->translations['ja'] ?? '商品名' }}</div>
-                  <div class="price_txt">{{ $menu->price }}円 (税込)</div>
+                  <div class="menu_name"><p>{{ $menu->translations['ja'] ?? '商品名' }}</p></div>
+                  <div class="price_txt"><p>{{ $menu->price }}円 (税込)</p></div>
                 </div>
               </button>
             </li>
