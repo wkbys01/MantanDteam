@@ -463,25 +463,25 @@ class MenusSeeder extends Seeder
          'sub_category_id' => 16,
          'price' => 1280,
          'translations' => ['ja' => "満腹まんたんセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/Greedy-Mantan_Set.svg',
       ]);
       Menu::create([
          'sub_category_id' => 16,
          'price' => 1280,
          'translations' => ['ja' => "よくばりまんたんセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/Full-Stomach_Set.svg',
       ]);
       Menu::create([
          'sub_category_id' => 16,
          'price' => 1080,
          'translations' => ['ja' => "デミグラスハンバーグセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/Demi-glace-hamburger-set.svg',
       ]);
       Menu::create([
          'sub_category_id' => 16,
          'price' => 1080,
          'translations' => ['ja' => "和風おろしハンバーグセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/Japanese-style-hamburger-steak_set.svg',
       ]);
 
       // パスタ
@@ -489,19 +489,19 @@ class MenusSeeder extends Seeder
          'sub_category_id' => 17,
          'price' => 980,
          'translations' => ['ja' => "ナポリタンセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/Neapolitan_set.svg',
       ]);
       Menu::create([
          'sub_category_id' => 17,
          'price' => 1080,
          'translations' => ['ja' => "カルボナーラセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/Carbonara_Set.svg',
       ]);
       Menu::create([
          'sub_category_id' => 17,
          'price' => 980,
          'translations' => ['ja' => "明太子スパゲッティセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/Mentaiko-Spaghetti_Set.svg',
       ]);
 
       // カレー
@@ -509,13 +509,13 @@ class MenusSeeder extends Seeder
          'sub_category_id' => 18,
          'price' => 980,
          'translations' => ['ja' => "ビーフカレーセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/Beef-curry_set.svg',
       ]);
       Menu::create([
          'sub_category_id' => 18,
          'price' => 880,
          'translations' => ['ja' => "チキンカレーセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/chicken-curry_set.svg',
       ]);
 
       // グリル
@@ -523,7 +523,7 @@ class MenusSeeder extends Seeder
          'sub_category_id' => 19,
          'price' => 1080,
          'translations' => ['ja' => "サーモンのグリルセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/Grilled-salmon_set.svg',
       ]);
 
       // 白身魚
@@ -531,7 +531,7 @@ class MenusSeeder extends Seeder
          'sub_category_id' => 20,
          'price' => 880,
          'translations' => ['ja' => "白身魚フライセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/White-fish-fry_set.svg',
       ]);
 
       // お子さま
@@ -539,13 +539,13 @@ class MenusSeeder extends Seeder
          'sub_category_id' => 21,
          'price' => 580,
          'translations' => ['ja' => "お子さまセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/children_s_set.svg',
       ]);
       Menu::create([
          'sub_category_id' => 21,
          'price' => 1580,
          'translations' => ['ja' => "ペアセット"],
-         'image_path' => 'images/menu_page/',
+         'image_path' => 'images/menu_page/set_menu/pair_set.svg',
       ]);
 
    // --------------------
