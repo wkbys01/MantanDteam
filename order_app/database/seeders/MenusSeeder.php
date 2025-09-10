@@ -702,7 +702,7 @@ class MenusSeeder extends Seeder
          'image_path' => 'images/menu_page/Takeout/Fried_White_Fish.svg',
       ]);
 
-      // カレー・オムライス
+      //　ライス
       Menu::create([
          'sub_category_id' => 27,
          'price' => 880,
@@ -721,8 +721,10 @@ class MenusSeeder extends Seeder
          'translations' => ['ja' => "オムライス弁当"],
          'image_path' => 'images/menu_page/Takeout/Omurice.svg',
       ]);
+
+      // パスタ
       Menu::create([
-         'sub_category_id' => 27,
+         'sub_category_id' => 28,
          'price' => 780,
          'translations' => ['ja' => "ナポリタン弁当"],
          'image_path' => 'images/menu_page/Takeout/Napolitan.svg',
@@ -730,7 +732,7 @@ class MenusSeeder extends Seeder
 
       // キッズ
       Menu::create([
-         'sub_category_id' => 28,
+         'sub_category_id' => 29,
          'price' => 580,
          'translations' => ['ja' => "キッズハンバーグ弁当"],
          'image_path' => 'images/menu_page/Takeout/Kids’Hamburg.svg',
@@ -738,7 +740,7 @@ class MenusSeeder extends Seeder
 
       // オードブル
       Menu::create([
-         'sub_category_id' => 29,
+         'sub_category_id' => 30,
          'price' => 1980,
          'translations' => ['ja' => "まんたん特製オードブル"],
          'image_path' => 'images/menu_page/Takeout/Mantan_Special_Platter.svg',
@@ -749,19 +751,19 @@ class MenusSeeder extends Seeder
    // --------------------
       // ドリンク
       Menu::create([
-         'sub_category_id' => 30,
+         'sub_category_id' => 31,
          'price' => 480,
          'translations' => ['ja' => "ドリンクバー"],
          'image_path' => 'images/menu_page/Drink_desert/Drink_Bar.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 30,
+         'sub_category_id' => 31,
          'price' => 280,
          'translations' => ['ja' => "レモンスカッシュ"],
          'image_path' => 'images/menu_page/Drink_desert/Lemon_Squash.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 30,
+         'sub_category_id' => 31,
          'price' => 380,
          'translations' => ['ja' => "マンゴースムージー"],
          'image_path' => 'images/menu_page/Drink_desert/Mango_Smoothie.svg',
@@ -769,110 +771,110 @@ class MenusSeeder extends Seeder
 
       // デザート
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 580,
          'translations' => ['ja' => "濃厚ガトーショコラ"],
          'image_path' => 'images/menu_page/Drink_desert/Gateau_Chocolat.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 380,
          'translations' => ['ja' => "ミニパフェ"],
          'image_path' => 'images/menu_page/Drink_desert/Mini_Parfait.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 480,
          'translations' => ['ja' => "パンケーキ"],
          'image_path' => 'images/menu_page/Drink_desert/Pancakes.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 580,
          'translations' => ['ja' => "チョコレートパフェ"],
          'image_path' => 'images/menu_page/Drink_desert/Chocolate_Parfait.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 580,
          'translations' => ['ja' => "いちごパフェ"],
          'image_path' => 'images/menu_page/Drink_desert/Strawberry_Parfait.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 580,
          'translations' => ['ja' => "プリンアラモード"],
          'image_path' => 'images/menu_page/Drink_desert/Pudding_à_la_Mode.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 480,
          'translations' => ['ja' => "ショートケーキ"],
          'image_path' => 'images/menu_page/Drink_desert/Shortcake.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 480,
          'translations' => ['ja' => "ティラミス"],
          'image_path' => 'images/menu_page/Drink_desert/Tiramisu.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 580,
          'translations' => ['ja' => "ベイクドチーズケーキ"],
          'image_path' => 'images/menu_page/Drink_desert/Baked_Cheesecake.svg',
       ]);
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 280,
          'translations' => ['ja' => "アイスクリーム バニラ"],
          'image_path' => 'images/menu_page/Drink_desert/IceCream_Vanilla.svg',
       ]);
 
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 280,
          'translations' => ['ja' => "アイスクリーム チョコ"],
          'image_path' => 'images/menu_page/Drink_desert/IceCream_Chocolate.svg',
       ]);
 
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 280,
          'translations' => ['ja' => "アイスクリーム 抹茶"],
          'image_path' => 'images/menu_page/Drink_desert/IceCream_Matcha.svg',
       ]);
       
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 380,
          'translations' => ['ja' => "ソフトクリームサンデー チョコ"],
          'image_path' => 'images/menu_page/Drink_desert/Soft-cream_Choco.svg',
       ]);
       
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 380,
          'translations' => ['ja' => "ソフトクリームサンデー いちご"],
          'image_path' => 'images/menu_page/Drink_desert/Soft-cream_Strawberry.svg',
       ]);
       
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 380,
          'translations' => ['ja' => "ソフトクリームサンデー キャラメルソース"],
          'image_path' => 'images/menu_page/Drink_desert/Soft-cream_Caramel.svg',
       ]);
       
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 480,
          'translations' => ['ja' => "和風デザート 白玉あんみつ"],
          'image_path' => 'images/menu_page/Drink_desert/Shiratama_Anmitsu.svg',
       ]);
 
       Menu::create([
-         'sub_category_id' => 31,
+         'sub_category_id' => 32,
          'price' => 480,
          'translations' => ['ja' => "和風デザート 抹茶わらびもち"],
          'image_path' => 'images/menu_page/Drink_desert/Matcha_WarabiMochi.svg',

@@ -44,7 +44,8 @@ class SubCategoriesSeeder extends Seeder
         SubCategory::create(['main_category_id' => 6, 'translations' => (["ja"=>"ハンバーグ" , "en"=>"Hamburger steak"])]);
         SubCategory::create(['main_category_id' => 6, 'translations' => (["ja"=>"鶏" , "en"=>"Chicken"])]);
         SubCategory::create(['main_category_id' => 6, 'translations' => (["ja"=>"豚・魚" , "en"=>"Pork・fish"])]);
-        SubCategory::create(['main_category_id' => 6, 'translations' => (["ja"=>"カレー・オムライス" , "en"=>"Curry・Omelette Rice"])]);
+        SubCategory::create(['main_category_id' => 6, 'translations' => (["ja"=>"ライス" , "en"=>"Rice"])]);
+        SubCategory::create(['main_category_id' => 6, 'translations' => (["ja"=>"パスタ" , "en"=>"Pasta"])]);
         SubCategory::create(['main_category_id' => 6, 'translations' => (["ja"=>"キッズ" , "en"=>"Kids"])]);
         SubCategory::create(['main_category_id' => 6, 'translations' => (["ja"=>"オードブル" , "en"=>"Hors d\'oeuvres"])]);
 
