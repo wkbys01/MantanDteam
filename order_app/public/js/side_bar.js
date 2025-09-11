@@ -191,22 +191,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // ------------------------------
     // プラスボタン
     // ------------------------------
-    plusBtn.addEventListener("click", () => {
-        quantity++;
-        modalQuantity.textContent = quantity;
-        modalPrice.textContent = (unitPrice * quantity);
+    document.querySelectorAll(".quantity_adjust_box").forEach(plusBtn => {
+        plusBtn.addEventListener("click", () => {
+            quantity++;
+            modalQuantity.textContent = quantity;
+            modalPrice.textContent = (unitPrice * quantity);
+        });
     });
 
     // ------------------------------
     // マイナスボタン
     // ------------------------------
-    minusBtn.addEventListener("click", () => {
-        if (quantity > 1) {
-            quantity--;
-            modalQuantity.textContent = quantity;
-            modalPrice.textContent = (unitPrice * quantity)
-            }
+    document.querySelectorAll(".quantity_adjust_box").forEach(minusBtn => {
+        minusBtn.addEventListener("click", () => {
+            if (quantity > 1) {
+                quantity--;
+                modalQuantity.textContent = quantity;
+                modalPrice.textContent = (unitPrice * quantity)
+                }
+        });
     });
+
 
 
     // ------------------------------
