@@ -52,7 +52,7 @@ img {
 
 /* ポップアップ共通スタイル */
 .popup_container {
-    display: none;
+    /* display: none; */
     z-index: 9;
     background: rgba(0, 0, 0, 0.25);
     position: fixed;

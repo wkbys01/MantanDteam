@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // ===== ポップアップ =====
+    const popup = document.querySelector(".popup_container");
     const listXBtn = document.getElementById("listXBtn");
     const menuXBtn = document.getElementById("menuXBtn");
 
@@ -130,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 非表示
     function hidePopup() {
         listDetails.style.display = "none";
-        menuDetails.style.display = "none";
+        // menuDetails.style.display = "none";
     }
 
     // --- メニュー詳細 ---
@@ -232,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 showPopup();
                 break;
             case "orderBtn":
-            case "confirmBtn":
+            // case "confirmBtn":
                 showDialog("注文を確定しますか？");
                 currentAction = "pageTransition";
                 break;
@@ -267,8 +268,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ===== ポップアップ =====
     // ×ボタン
-    listXBtn.addEventListener("click", hidePopup);
-    menuXBtn.addEventListener("click", hidePopup);
+    // listXBtn.addEventListener("click", hidePopup);
+    // menuXBtn.addEventListener("click", hidePopup);
+    popup.addEventListener("click", function(event) {
+        const target = event.target;
+        const targetId = target.id;
+        console.log(`target：${target}\ntargetId：${targetId}`);
+
+        switch (targetId) {
+            case "menuXBtn":
+            case "listXBtn":
+                hidePopup();
+                break;
+            case "addBtn":
+                addMenu();
+                break;
+            case "confirmBtn":
+                currentId = "confirmBtn";
+                showDialog("注文を確定しますか？");
+                currentAction = "pageTransition";
+                break;
+            default:
+                alert("ポップアップの非表示に失敗");
+                break;
+        }
+    })
+
 
     // --- 注文リスト ---
     // 確定ボタン
@@ -284,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // 追加ボタン
-    addBtn.addEventListener("click", addMenu);
+    // addBtn.addEventListener("click", addMenu);
 
 
     // ===== ダイアログ =====

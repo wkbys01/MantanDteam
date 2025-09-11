@@ -1,8 +1,8 @@
 /* メニュー詳細ポップアップのスタイル */
 /* 表示テスト用 */
-/* #menuDetails {
-    display: block;
-} */
+#menuDetails {
+    display: none;
+}
 .popup_title {
     min-width: 400px;
     padding-bottom: 3px;
