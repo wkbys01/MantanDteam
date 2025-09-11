@@ -260,11 +260,108 @@ document.addEventListener("DOMContentLoaded", function() {
     // オプションボタンを初期化
     initializeOptionBtns();
 
-    // 追加ボタン
-    function addMenu() {
-        alert("商品を注文リストに追加しました。");
-        hidePopup("addBtn");
+
+
+// ===============================================================================
+// ===== 注文リスト =====
+// ===============================================================================
+
+let orderList = []; // 注文リスト配列
+
+// ページロード時にローカルストレージから復元
+const savedOrders = localStorage.getItem("orderList");
+if (savedOrders) {
+    orderList = JSON.parse(savedOrders);
+    updateOrderUI();
+}
+
+// changeQty をグローバルに
+window.changeQty = function(index, delta) {
+    const item = orderList[index];
+    item.qty += delta;
+    if(item.qty < 1) item.qty = 1;
+    item.price = item.unitPrice * item.qty;  // unitPrice を使って計算
+
+    updateOrderUI();
+    // ローカルストレージに保存
+    localStorage.setItem("orderList", JSON.stringify(orderList));
+}
+
+// addMenu のときに unitPrice を追加
+function addMenu() {
+    const name = modalName.textContent;
+    const qty = quantity;
+    const price = unitPrice * qty;
+
+    const index = orderList.findIndex(item => item.name === name);
+    if(index !== -1){
+        orderList[index].qty += qty;
+        orderList[index].price += price;
+    } else {
+        orderList.push({name, qty, price, unitPrice}); // unitPrice を保持
     }
+
+    updateOrderUI();
+    // ローカルストレージに保存
+    localStorage.setItem("orderList", JSON.stringify(orderList));
+
+    hidePopup("addBtn");
+
+    quantity = 1;
+    modalQuantity.textContent = quantity;
+    modalPrice.textContent = unitPrice;
+}
+
+function updateOrderUI() {
+    // モーダル内テーブル tbody
+    const tbody = listDetails.querySelector("tbody");
+    tbody.innerHTML = "";
+
+    // サイドバー ul
+    const sidebarList = document.querySelector(".order_list");
+    sidebarList.innerHTML = "";
+
+    let total = 0;
+
+    orderList.forEach((item, i) => {
+        total += item.price;
+
+        // モーダル用 tr
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.price / item.qty}</td>
+            <td>
+                <div class="quantity_adjust_box">
+                    <button class="minus_btn" onclick="changeQty(${i}, -1)"></button>
+                    <p class="quantity">${item.qty}</p>
+                    <button class="plus_btn" onclick="changeQty(${i}, 1)"></button>
+                </div>
+            </td>
+        `;
+        tbody.appendChild(tr);
+
+        // サイドバー用 li
+        const li = document.createElement("li");
+        li.textContent = `${item.name} x${item.qty} - ¥${item.price}`;
+        sidebarList.appendChild(li);
+    });
+
+    // 合計金額表示
+    const totalPriceElement = listDetails.querySelector(".total_price");
+    totalPriceElement.textContent = total;
+}
+
+// 注文確定ボタン
+function confirmOrder() {
+    // ここでダイアログ表示済みなら、ダイアログOK後に呼ぶ想定
+    orderList = []; // 配列をリセット
+    localStorage.removeItem("orderList"); // ローカルストレージもクリア
+    updateOrderUI(); // UIを更新（モーダルとサイドバーの中身を空に）
+}
+
+// ===============================================================================
+
 
 
     // ===== ダイアログ =====
@@ -286,6 +383,7 @@ document.addEventListener("DOMContentLoaded", function() {
         switch (currentId) {
             case "orderBtn":
             case "confirmBtn":
+                confirmOrder();      // 注文リストリセット
                 location.href = "/order_page";
                 break;
             case "callBtn":
