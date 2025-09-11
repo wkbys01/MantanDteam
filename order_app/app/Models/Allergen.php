@@ -15,4 +15,8 @@ class Allergen extends Model
     protected $casts = [
         'translations' => 'array',
     ];
+
+    public function menus() {
+        return $this->belongsToMany(Menu::class, 'menu_allergens', 'allergen_id', 'menu_id');
+    }
 }

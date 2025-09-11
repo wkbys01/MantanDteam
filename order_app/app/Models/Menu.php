@@ -25,4 +25,8 @@ class Menu extends Model
     public function options() {
         return $this->hasMany(MenuOptions::class);
     }
+
+    public function allergens() {
+        return $this->belongsToMany(Allergen::class, 'menu_allergens', 'menu_id', 'allergen_id');
+    }
 }
