@@ -74,13 +74,13 @@
             <div class="footer_container">
                 <div class="total_price_box">
                     <p>合計金額：</p>
-                    <p class="total_price" id="modalTotalPrice">？？？？</p>
+                    <p class="total_price" id="modalPrice">？？？？</p>
                 </div>
                 <div class="btn_container">
                     <div class="quantity_adjust_box menu_adjust_box">
-                        <button class="minus_btn"></button>
-                        <p class="quantity">1</p>
-                        <button class="plus_btn"></button>
+                        <button class="minus_btn" id="minusBtn"></button>
+                        <p class="quantity" id="modalQuantity">1</p>
+                        <button class="plus_btn" id="plusBtn"></button>
                     </div>
                     <button class="add_btn" id="addBtn">追加</button>
                 </div>
