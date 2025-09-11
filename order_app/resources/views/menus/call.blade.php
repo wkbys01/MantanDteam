@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="{{ asset('css/decision.css') }}">
 </head>
 <body>
-  
-  <main>
+
+  <div class="decision_container">
 
     <h1 class="notice_txt">呼び出し中・・・</h1>
     <p class="guide_txt">まもなく従業員が参ります。<br>しばらくお待ちください。</p>
@@ -22,7 +22,7 @@
     </div>
     <p class="annotation_txt">※この画面はタップ、<br>もしくは自動的に消去されます。</p>
 
-  </main>
+  </div>
 
 </body>
 </html>

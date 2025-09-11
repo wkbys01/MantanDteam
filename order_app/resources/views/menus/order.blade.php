@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="{{ asset('css/decision.css') }}">
 </head>
 <body>
-  
-  <main>
-    
+
+  <div class="decision_container">
+
     <h1 class="notice_txt">注文確定いたしました。</h1>
     <p class="guide_txt">しばらくお待ちください。</p>
     <div class="people_img">
@@ -22,7 +22,7 @@
     </div>
     <p class="annotation_txt">※この画面はタップ、<br>もしくは自動的に消去されます。</p>
 
-  </main>
+  </div>
 
 </body>
 </html>
