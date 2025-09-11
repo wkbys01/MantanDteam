@@ -129,9 +129,21 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     // 非表示
-    function hidePopup() {
-        listDetails.style.display = "none";
-        // menuDetails.style.display = "none";
+    function hidePopup(id) {
+        let btnId = id;
+        console.log(btnId);
+
+        switch (btnId) {
+            case "listXBtn":
+                listDetails.style.display = "none";
+                break;
+            case "menuXBtn":
+                menuDetails.style.display = "none";
+                break;
+            default:
+                alert("ポップアップの非表示に失敗")
+                break;
+        }
     }
 
     // --- メニュー詳細 ---
@@ -278,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function() {
         switch (targetId) {
             case "menuXBtn":
             case "listXBtn":
-                hidePopup();
+                hidePopup(targetId);
                 break;
             case "addBtn":
                 addMenu();
