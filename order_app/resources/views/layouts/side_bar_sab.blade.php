@@ -44,10 +44,10 @@
                     </button>
                 </div>
                 <div class="checkout_btn popup_btn h_65 round">
-                    <button class="icon_flex_btn" id="checkoutBtn">
+                    <a href="{{ route('checkout.complete') }}" class="icon_flex_btn" id="checkoutBtn">
                         <img src="{{ asset('images/icon/icon_checkout01.svg') }}" alt="お金" class="icon_img">
                         <p>お会計</p>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

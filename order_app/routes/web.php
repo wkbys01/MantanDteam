@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TopPageController;
 use App\Http\Controllers\MenuPageController;
+use App\Http\Controllers\HistoryController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,6 +17,9 @@ Route::get('/top_page', [TopPageController::class, 'index'])->name("top_page");
 Route::get('/menu_page/{mainCategoryId}', [MenuPageController::class, 'index'])->name('menu_page');
 Route::get('/menu_page/{mainCategoryId}/sub/{subCategoryId}', [MenuPageController::class, 'showSub'])->name('menu_page.sub');
 
+// 注文履歴用
+Route::get('/history_page', [HistoryController::class, 'index'])->name('history.index');
+Route::get('/checkout_page', [HistoryController::class, 'checkout'])->name('checkout.complete');
 
 // 確認用（後で削除）
 Route::get('/test', [TopPageController::class, 'test'])->name("test");
@@ -36,13 +40,9 @@ Route::get('/call_page', function () {
     return view('menus.call');
 });
 
-Route::get('/checkout_page', function () {
-    return view('menus.checkout');
-});
-
-Route::get('/history_page', function () {
-    return view('menus.history');
-});
+// Route::get('/checkout_page', function () {
+//     return view('menus.checkout');
+// });
 
 Route::get('/pop_up', function () {
     return view('layouts.dialog');

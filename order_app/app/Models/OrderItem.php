@@ -13,4 +13,16 @@ class OrderItem extends Model
         'quantity',
         'options',
     ];
+
+    protected $casts = [
+        'options' => 'array',
+    ];
+
+    public function menu(){
+        return $this->belongsTo(\App\Models\Menu::class);
+    }
+
+    public function order() {
+        return $this->belongsTo(Order::class);
+    }
 }
