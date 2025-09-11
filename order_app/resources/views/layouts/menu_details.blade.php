@@ -95,7 +95,7 @@
                     <p class="total_price">？？？？</p>
                 </div>
                 <div class="btn_container">
-                    <div class="quantity_adjust_box">
+                    <div class="quantity_adjust_box menu_adjust_box">
                         <button class="minus_btn"></button>
                         <p class="quantity">1</p>
                         <button class="plus_btn"></button>
