@@ -21,4 +21,8 @@ class Menu extends Model
     public function subCategory() {
         return $this->belongsTo(SubCategory::class);
     }
+
+    public function allergens() {
+        return $this->belongsToMany(Allergen::class, 'menu_allergens', 'menu_id', 'allergen_id');
+    }
 }

@@ -61,7 +61,16 @@
           <ul class="menu_list">
             @foreach($menus as $menu)
             <li class="menu_content">
-              <button class="menu_content_btn">
+              <button 
+                class="menu_content_btn" 
+                data-name="{{ $menu->translations['ja'] ?? '商品名' }}"
+                data-price="{{ $menu->price }}"
+                data-image="{{ asset($menu->image_path) }}"
+                data-allergens='@json($menu->allergens->map(fn($a) => [
+                    "name" => $a->translations["ja"] ?? $a->name,
+                    "image" => asset($a->image_path),
+                ]))'
+              >
                 <div class="menu_img_box">
                   <img src="{{ asset($menu->image_path) }}" alt="">
                 </div>

@@ -20,7 +20,7 @@ class AllergensSeeder extends Seeder
                 'en' => "Wheat",
                 'zh' => "小麥",
             ],
-            'image_path' => null,
+            'image_path' => "images/icon/allergy_wheat.svg",
         ]);
 
         Allergen::create([
@@ -29,7 +29,7 @@ class AllergensSeeder extends Seeder
                 'en' => "Buckwheat",
                 'zh' => "蕎麥",
             ],
-            'image_path' => null,
+            'image_path' => "images/icon/allergy_soba.svg",
         ]);
 
         Allergen::create([
@@ -38,7 +38,7 @@ class AllergensSeeder extends Seeder
                 'en' => "Milk",
                 'zh' => "牛奶",
             ],
-            'image_path' => null,
+            'image_path' => "images/icon/allergy_milk.svg",
         ]);
         
         Allergen::create([
@@ -47,7 +47,7 @@ class AllergensSeeder extends Seeder
                 'en' => "Egg",
                 'zh' => "鸡蛋",
             ],
-            'image_path' => null,
+            'image_path' => "images/icon/allergy_egg.svg",
         ]);
         
         Allergen::create([
@@ -56,7 +56,7 @@ class AllergensSeeder extends Seeder
                 'en' => "Crab",
                 'zh' => "螃蟹",
             ],
-            'image_path' => null,
+            'image_path' => "images/icon/allergy_crab.svg",
         ]);
         
         Allergen::create([
@@ -65,7 +65,7 @@ class AllergensSeeder extends Seeder
                 'en' => "Shrimp",
                 'zh' => "蝦",
             ],
-            'image_path' => null,
+            'image_path' => "images/icon/allergy_shrimp.svg",
         ]);
         
         Allergen::create([
@@ -74,7 +74,7 @@ class AllergensSeeder extends Seeder
                 'en' => "Walnut",
                 'zh' => "核桃",
             ],
-            'image_path' => null,
+            'image_path' => "images/icon/ allergy_kurumi.svg",
         ]);
 
         Allergen::create([
@@ -83,7 +83,7 @@ class AllergensSeeder extends Seeder
                 'en' => "Peanuts",
                 'zh' => "落花生",
             ],
-            'image_path' => null,
+            'image_path' => "images/icon/allergy_rakkasei.svg",
         ]);
     }
 }

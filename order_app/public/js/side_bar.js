@@ -39,6 +39,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuDetails = document.getElementById("menuDetails");
     // const optionBtns = document.querySelectorAll('.option_btn');
     const addBtn = document.getElementById("addBtn");
+    // 追記
+    let quantity = 1;       // モーダル内数量
+    let unitPrice = 0;      // 選択中商品の単価
+    let totalPrice = 0;     // 追加ボタンで加算される合計金額
+    const modalName = document.querySelector("#modalName");
+    const modalImage = document.querySelector("#modalImage");
+    const modalQuantity = document.querySelector(".quantity");
+    const modalPrice = document.querySelector("#modalPrice");
+    const totalPriceElement = document.querySelector("#modalTotalPrice"); 
+    const allergyList = document.querySelector(".allergy_contents");
 
     // メニューボタン
     const menuContentBtns = document.querySelectorAll(".menu_content_btn");
@@ -134,6 +144,70 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- メニュー詳細 ---
+    // 表示機能　追記
+    // ------------------------------
+    // 商品ボタンをクリックした時
+    // ------------------------------
+    document.querySelectorAll(".menu_content_btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const name = btn.dataset.name;
+            const price = parseInt(btn.dataset.price, 10); // 数値化
+            const image = btn.dataset.image;
+            const allergens = JSON.parse(btn.dataset.allergens);
+
+            allergyList.innerHTML = "";
+            allergens.forEach(a => {
+                const li = document.createElement("li");
+                li.innerHTML = `
+                    <img src="${a.image}" alt="${a.name}"></img>
+                    <p>${a.name}</p>
+                `;
+                allergyList.appendChild(li);
+            });
+
+            unitPrice = price;
+            quantity = 1; // モーダル表示時は数量1にリセット
+
+            // モーダル内に値を反映
+            modalName.textContent = name;
+            modalImage.src = image;
+            modalQuantity.textContent = quantity;
+            modalPrice.textContent = unitPrice;
+        });
+    });
+
+    // ------------------------------
+    // プラスボタン
+    // ------------------------------
+    document.querySelector(".plus_btn").addEventListener("click", () => {
+        quantity++;
+        modalQuantity.textContent = quantity;
+        modalPrice.textContent = (unitPrice * quantity);
+    });
+
+    // ------------------------------
+    // マイナスボタン
+    // ------------------------------
+    document.querySelector(".minus_btn").addEventListener("click", () => {
+        if (quantity > 1) {
+            quantity--;
+            modalQuantity.textContent = quantity;
+            modalPrice.textContent = (unitPrice * quantity);
+        }
+    });
+
+    // ------------------------------
+    // 追加ボタン
+    // ------------------------------
+    document.querySelector("#addBtn").addEventListener("click", () => {
+        totalPrice += unitPrice * quantity; // 合計金額に加算
+        totalPriceElement.textContent = totalPrice;
+
+        // モーダル内数量をリセット
+        quantity = 1;
+        modalQuantity.textContent = quantity;
+        modalPrice.textContent = unitPrice;
+    });
 
     // オプションボタン
     function initializeOptionBtns() {

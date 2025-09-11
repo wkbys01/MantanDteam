@@ -32,9 +32,17 @@
 .allergy_contents {
     background-color: var(--secondary-bg-white);
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     height: 90px;
+}
+.allergy_contents li{
+    padding: 0 8px;
+}
+
+.allergy_contents p{
+    text-align: center;
+    padding-top: 5px;
 }
 
 .option_container {

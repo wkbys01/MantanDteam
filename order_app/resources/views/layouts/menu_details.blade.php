@@ -17,34 +17,16 @@
         <div class="popup_contents">
 
             <div class="header_container">
-                <h2 class="popup_title">メニュー名</h2>
+                <h2 class="popup_title" id="modalName">メニュー名</h2>
                 <button class="x_btn" id="menuXBtn">×</button>
             </div>
 
             <div class="center_container">
                 <div class="photo_container">
                     {{-- 仮置き --}}
-                    <img src="{{ asset('images/menu_page/meat_pasta.jpg') }}" alt="メニューの写真" class="menu_photo">
-                    <ul class="allergy_contents">
-                        <li>
-                            <img src="{{ asset('images/icon/allergy_crab.svg') }}" alt="かに">
-                        </li>
-                        <li>
-                            <img src="{{ asset('images/icon/allergy_egg.svg') }}" alt="卵">
-                        </li>
-                        <li>
-                            <img src="{{ asset('images/icon/allergy_milk.svg') }}" alt="乳">
-                        </li>
-                        <li>
-                            <img src="{{ asset('images/icon/allergy_shrimp.svg') }}" alt="えび">
-                        </li>
-                        <li>
-                            <img src="{{ asset('images/icon/allergy_soba.svg') }}" alt="そば">
-                        </li>
-                        <li>
-                            <img src="{{ asset('images/icon/allergy_wheat.svg') }}" alt="小麦">
-                        </li>
-                    </ul>
+                    <img src="" alt="メニューの写真" class="menu_photo" id="modalImage">
+                    <ul class="allergy_contents"><!-- jsで差し替え --></ul>
+                    
                 </div>
 
                 <div class="option_container">
@@ -92,7 +74,7 @@
             <div class="footer_container">
                 <div class="total_price_box">
                     <p>合計金額：</p>
-                    <p class="total_price">？？？？</p>
+                    <p class="total_price" id="modalTotalPrice">？？？？</p>
                 </div>
                 <div class="btn_container">
                     <div class="quantity_adjust_box">
@@ -106,6 +88,5 @@
 
         </div>
     </div>
-
 </body>
 </html>
