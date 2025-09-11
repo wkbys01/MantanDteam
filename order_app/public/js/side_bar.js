@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // メニュー詳細
     const menuDetails = document.getElementById("menuDetails");
-    // const optionBtns = document.querySelectorAll('.option_btn');
+    // const optionBtns = document.querySelectorAll(".option_btn");
     const addBtn = document.getElementById("addBtn");
     // 追記
     let quantity = 1;       // モーダル内数量
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const modalImage = document.querySelector("#modalImage");
     const modalQuantity = document.querySelector(".quantity");
     const modalPrice = document.querySelector("#modalPrice");
-    const totalPriceElement = document.querySelector("#modalTotalPrice"); 
+    const totalPriceElement = document.querySelector("#modalTotalPrice");
     const allergyList = document.querySelector(".allergy_contents");
 
     // メニューボタン
@@ -213,14 +213,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // ------------------------------
     // 追加ボタン
     // ------------------------------
-    document.querySelector("#addBtn").addEventListener("click", () => {
-        totalPrice += unitPrice * quantity; // 合計金額に加算
-        totalPriceElement.textContent = totalPrice;
+    document.querySelectorAll(".btn_container").forEach(addBtn => {
+        addBtn.addEventListener("click", () => {
+            totalPrice += unitPrice * quantity; // 合計金額に加算
+            totalPriceElement.textContent = totalPrice;
 
-        // モーダル内数量をリセット
-        quantity = 1;
-        modalQuantity.textContent = quantity;
-        modalPrice.textContent = unitPrice;
+            // モーダル内数量をリセット
+            quantity = 1;
+            modalQuantity.textContent = quantity;
+            modalPrice.textContent = unitPrice;
+        });
     });
 
     // オプションボタン
