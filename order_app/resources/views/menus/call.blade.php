@@ -24,6 +24,7 @@
         </div>
     </div>
 
+    <script src="{{ asset('js/side_bar.js') }}"></script>
     <script src="{{ asset('js/decision.js') }}"></script>
 </body>
 </html>
