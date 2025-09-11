@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // ===== ポップアップ =====
+    const popupContainers = document.querySelectorAll(".popup_container");
     const listXBtn = document.getElementById("listXBtn");
     const menuXBtn = document.getElementById("menuXBtn");
 
@@ -138,9 +139,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     // 非表示
-    function hidePopup() {
-        listDetails.style.display = "none";
-        menuDetails.style.display = "none";
+    function hidePopup(id) {
+        let btnId = id;
+        console.log(btnId);
+
+        switch (btnId) {
+            case "listXBtn":
+                listDetails.style.display = "none";
+                break;
+            case "addBtn":
+            case "menuXBtn":
+                menuDetails.style.display = "none";
+                break;
+            default:
+                alert("ポップアップの非表示に失敗")
+                break;
+        }
     }
 
     // --- メニュー詳細 ---
@@ -250,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 追加ボタン
     function addMenu() {
         alert("商品を注文リストに追加しました。");
-        hidePopup();
+        hidePopup("addBtn");
     }
 
 
@@ -306,7 +320,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 showPopup();
                 break;
             case "orderBtn":
-            case "confirmBtn":
                 showDialog("注文を確定しますか？");
                 currentAction = "pageTransition";
                 break;
@@ -340,16 +353,38 @@ document.addEventListener("DOMContentLoaded", function() {
     checkoutBtn.addEventListener("click", handleButtonClick);
 
     // ===== ポップアップ =====
-    // ×ボタン
-    listXBtn.addEventListener("click", hidePopup);
-    menuXBtn.addEventListener("click", hidePopup);
+    popupContainers.forEach(popup => {
+        popup.addEventListener("click", function(event) {
+            const target = event.target;
+            const targetId = target.id;
+            console.log(`target：${target}\ntargetId：${targetId}`);
+
+            switch (targetId) {
+                case "menuXBtn":
+                case "listXBtn":
+                    hidePopup(targetId);
+                    break;
+                case "addBtn":      // メニュー詳細：追加ボタン
+                    addMenu();
+                    break;
+                case "confirmBtn":  // 注文リスト詳細：注文確定ボタン
+                    currentId = "confirmBtn";
+                    showDialog("注文を確定しますか？");
+                    currentAction = "pageTransition";
+                    break;
+                default:
+                    console.log("その他のボタンが押されました");
+                    break;
+            }
+        });
+    });
 
     // --- 注文リスト ---
     // 確定ボタン
-    confirmBtn.addEventListener("click", handleButtonClick);
+    // confirmBtn.addEventListener("click", handleButtonClick);
 
     // --- メニュー詳細 ---
-    // 商品ボタン
+    // メニューボタン
     menuContentBtns.forEach(btn => {
         btn.addEventListener("click", function() {
             currentId = "menuContentBtn";
@@ -358,7 +393,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // 追加ボタン
-    addBtn.addEventListener("click", addMenu);
+    // addBtn.addEventListener("click", addMenu);
 
 
     // ===== ダイアログ =====

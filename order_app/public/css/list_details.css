@@ -1,4 +1,7 @@
 /* 注文リストのスタイル */
+#listDetails {
+    display: none;
+}
 .table_container {
     width: 100%;
     height: 445px;
