@@ -42,4 +42,17 @@ class HistoryController extends Controller
 
         return view('menus.history', compact('orders', 'totalPrice'));
     }
+
+    public function checkout()
+    {
+        $orders = Order::all();
+        foreach ($orders as $order) {
+            $order->items()->delete();
+            $order->delete();
+        }
+
+        return view('menus.checkout');
+    }
+
+
 }

@@ -30,8 +30,8 @@
                             @foreach($order->items as $item)
                                 <tr>
                                     <td class="main_td">{{ $item->menu->translations['ja'] ?? '商品名不明' }}</td>
-                                    <td>{{ $item->quantity }}</td>
                                     <td>{{ $item->menu->price }}円</td>
+                                    <td>{{ $item->quantity }}</td>
                                     <td>○</td>
                                 </tr>
                                 @if($item->menu->options)
@@ -39,8 +39,8 @@
                                         @if(in_array($option->id, $item->options ?? []))
                                             <tr>
                                                 <td class="main_td_sab">:{{ $option->translations['ja'] ?? 'オプション名不明' }}</td>
-                                                <td>{{ $item->quantity }}</td>
                                                 <td>{{ $option->price }}円</td>
+                                                <td>{{ $item->quantity }}</td>
                                                 <td></td>
                                             </tr>
                                         @endif
@@ -54,17 +54,7 @@
                 <div class="footer_div">
                     <h2>合計金額</h2>
                     <p class="footer_p">:</p>
-                    <p>
-                        @php
-                            $grandTotal = 0;
-                        @endphp
-
-                        @foreach($orders as $order)
-                            @php $grandTotal += $order->total_price; @endphp
-                        @endforeach
-
-                        {{ $grandTotal }}円
-                    </p>
+                    <p>{{ $totalPrice }}円</p>
                 </div>
             </div>
             <div>
