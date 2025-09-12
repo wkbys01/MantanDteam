@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MenuOptionsSeeder extends Seeder
 {
@@ -13,5 +14,7 @@ class MenuOptionsSeeder extends Seeder
     public function run(): void
     {
         //
+        DB::table('menu_options') -> insert([
+        ]);
     }
 }
