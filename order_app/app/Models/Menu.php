@@ -23,7 +23,7 @@ class Menu extends Model
     }
 
     public function options() {
-        return $this->hasMany(MenuOptions::class);
+        return $this->hasMany(MenuOption::class);
     }
 
     public function allergens() {

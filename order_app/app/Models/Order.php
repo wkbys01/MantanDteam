@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    //
     protected $fillable = [
         'table_number',
         'status',
@@ -14,6 +13,6 @@ class Order extends Model
 
     public function items()
     {
-        return $this->hasMany(\App\Models\OrderItems::class);
+        return $this->hasMany(\App\Models\OrderItem::class);
     }
 }
