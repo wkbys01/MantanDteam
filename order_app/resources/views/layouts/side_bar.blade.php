@@ -43,22 +43,7 @@
                 </div>
                 <div class="order_list_box round">
                     <ul class="order_list">
-                        <!-- テスト用 -->
-                        <div class="order_separator">
-                            <li class="order_menu_txt">満腹まんたんセット</li>
-                            <li class="order_option_txt">トッピング</li>
-                            <li class="order_option_txt">ドリンクバー</li>
-                        </div>
-                        <div class="order_separator">
-                            <li class="order_menu_txt">たっぷりチーズのドリア</li>
-                        </div>
-                        <div class="order_separator">
-                            <li class="order_menu_txt">ふわとろオムライス</li>
-                            <li class="order_option_txt">デミグラス</li>
-                        </div>
-                        <div class="order_separator">
-                            <li class="order_menu_txt">まんたんハンバーグ定食</li>
-                        </div>
+                        <!-- JSで追加される注文内容 -->
                     </ul>
                 </div>
                 <div class="order_btn popup_btn h_65 round">
