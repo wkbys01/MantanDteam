@@ -279,13 +279,19 @@ if (savedOrders) {
 window.changeQty = function(index, delta) {
     const item = orderList[index];
     item.qty += delta;
-    if(item.qty < 1) item.qty = 1;
-    item.price = item.unitPrice * item.qty;  // unitPrice を使って計算
+
+    if (item.qty <= 0) {
+        // 数量が0以下になったらリストから削除
+        orderList.splice(index, 1);
+    } else {
+        // それ以外は金額を再計算
+        item.price = item.unitPrice * item.qty;
+    }
 
     updateOrderUI();
-    // ローカルストレージに保存
     localStorage.setItem("orderList", JSON.stringify(orderList));
 }
+
 
 // addMenu のときに unitPrice を追加
 function addMenu() {
